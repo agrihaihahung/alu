@@ -426,8 +426,12 @@
       const sheet = (name, rows) => `<Worksheet ss:Name="${escXml(name)}"><Table>${rows.join('')}</Table><WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel"><FreezePanes/><FrozenNoSplit/><SplitHorizontal>1</SplitHorizontal><TopRowBottomPane>1</TopRowBottomPane></WorksheetOptions></Worksheet>`;
       const al = Array.isArray(p.aluminum) ? p.aluminum : [];
       const ac = p.accessoriesIncluded === false ? [] : (Array.isArray(p.accessories) ? p.accessories : []);
-      const alRows = [row(['STT','Hệ','Mã hàng','Tên hàng','Màu sắc','Quy cách','ĐVT','Số lượng','Kg/thanh','Tổng khối lượng (kg)','Đơn giá (đ/kg)','Thành tiền (đ)'])];
-      al.forEach((x,i) => alRows.push(row([[i+1,'Number'],x.system||'',x.code||'',x.name||'',x.color||'',x.spec||'',x.unit||'Thanh',[n(x.qty),'Number'],[n(x.weight),'Number'],[n(x.qty)*n(x.weight),'Number'],[n(x.price),'Number'],[n(x.qty)*n(x.weight)*n(x.price),'Number']])));
+      // Sheet Nhôm thanh: bổ sung cột M (tên khách hàng) và N (ngày báo giá).
+      // Lặp lại thông tin trên từng dòng để dễ lọc, sắp xếp và xử lý dữ liệu trong Google Sheets.
+      const customerName = c.name || '';
+      const quoteDate = fmtDate(q.date || new Date().toISOString().slice(0,10));
+      const alRows = [row(['STT','Hệ','Mã hàng','Tên hàng','Màu sắc','Quy cách','ĐVT','Số lượng','Kg/thanh','Tổng khối lượng (kg)','Đơn giá (đ/kg)','Thành tiền (đ)','Tên khách hàng','Ngày tháng năm'])];
+      al.forEach((x,i) => alRows.push(row([[i+1,'Number'],x.system||'',x.code||'',x.name||'',x.color||'',x.spec||'',x.unit||'Thanh',[n(x.qty),'Number'],[n(x.weight),'Number'],[n(x.qty)*n(x.weight),'Number'],[n(x.price),'Number'],[n(x.qty)*n(x.weight)*n(x.price),'Number'],customerName,quoteDate])));
       const acRows = [row(['STT','Mã hàng','Tên phụ kiện','Nhóm phụ kiện','ĐVT','Số lượng','Đơn giá (đ)','Thành tiền gốc (đ)','Chiết khấu riêng (%)','Tiền chiết khấu riêng (đ)','Được xét CK chung','Thành tiền sau CK riêng (đ)'])];
       ac.forEach((x,i) => { const gross=n(x.qty)*n(x.price), pct=Math.min(100,Math.max(0,n(x.discountPercent))), itemDiscount=gross*pct/100, commonEligible=!!x.discountEligible && pct===0 && p.accessoriesIncluded!==false; acRows.push(row([[i+1,'Number'],x.code||'',x.name||'',x.group||x.spec||'',x.unit||'Cái',[n(x.qty),'Number'],[n(x.price),'Number'],[gross,'Number'],[pct,'Number'],[itemDiscount,'Number'],commonEligible?'Có':'Không',[gross-itemDiscount,'Number']])); });
       const summaryRows = [
