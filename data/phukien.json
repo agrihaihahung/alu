@@ -1,0 +1,2554 @@
+[
+  {
+    "system": "XepGap",
+    "code": "KS-HY0068AX-63",
+    "name": "Bản lề hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 192000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0042SX-63",
+    "name": "Bánh xe dẫn hướng trên hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 208000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0043XX-63",
+    "name": "Bánh xe chịu tải dưới 3-1 hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 679000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0044XX-63",
+    "name": "Bánh xe chịu tải dưới 2-2 hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 465000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0043CX-63",
+    "name": "Bánh xe inox chịu tải dưới 3-1 hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1690000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0044BX-63",
+    "name": "Bánh xe inox chịu tải dưới 2-2 hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 990000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0051SL-02",
+    "name": "Bánh xe chịu tải trên 2-2 hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1330000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0052SL-02",
+    "name": "Bánh xe chịu tải trên 3-1 hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1950000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CD0145BX-62",
+    "name": "Thân khóa truyền động 2 chiều",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 308000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-XN0003AL-02",
+    "name": "Tay nắm có chốt gạt",
+    "unit": "bộ",
+    "grp": "",
+    "price": 775000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-ZS0002PL-02",
+    "name": "Tay nắm - 92mm",
+    "unit": "bộ",
+    "grp": "",
+    "price": 1099000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-ZS0005YL-02",
+    "name": "Tay nắm không lõi khóa",
+    "unit": "bộ",
+    "grp": "",
+    "price": 1099000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-ST0035HB-32",
+    "name": "Thân khóa đơn điểm 9235 + miệng khóa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 350000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CX0081DL-02",
+    "name": "chốt tự động hệ xếp gấp 68",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 179000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-XN0006AL-02",
+    "name": "Tay nắm 2 mặt kết hợp với lõi khóa",
+    "unit": "bộ",
+    "grp": "",
+    "price": 1518000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CD0217AX-62",
+    "name": "Thân khóa truyền động 2 chiều dùng kèm lõi khóa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 675000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-SX4848RT-38",
+    "name": "Lõi khóa 1 đầu chìa 96/48/48",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 574000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CX0080DS-50",
+    "name": "Trục chốt truyền động hệ xếp gấp 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 65000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CX0080ES-50",
+    "name": "Nối trục chốt truyền động hệ xếp gấp 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 60000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HY0050AL-02",
+    "name": "Bản lề cánh - khung hệ xếp gấp 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 250000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HY0050BL-02",
+    "name": "Bản lề cánh - cánh hệ xếp gấp 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 355000
+  },
+  {
+    "system": "XepGap",
+    "code": "MF-HY0168AL-02",
+    "name": "Bản lề cánh - cánh hệ xếp gấp 50 (phiên bản cao cấp)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 520000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0050BL-02",
+    "name": "Bánh xe chịu tải dưới 2-2 hệ xếp gấp 50 (L)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 440000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0050BR-02",
+    "name": "Bánh xe chịu tải dưới 2-2 hệ xếp gấp 50 (R)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 440000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0065CL-02",
+    "name": "Bánh xe chịu tải trên 2-2 hệ xếp gấp 50 (L)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0065CR-02",
+    "name": "Bánh xe chịu tải trên 2-2 hệ xếp gấp 50 (R)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0050AL-02",
+    "name": "Bánh xe chịu tải dưới 3-1 hệ xếp gấp 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 830000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0065AL-02",
+    "name": "Bánh xe chịu tải trên 3-1 hệ xếp gấp 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 890000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0150AL-02",
+    "name": "Bánh xe chịu tải dưới 3-1 hệ xếp gấp 50 - inox",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 990000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0150BL-02",
+    "name": "Bánh xe chịu tải dưới 2-2 hệ xếp gấp 50 (L) - inox",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 595000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-HL0150BR-02",
+    "name": "Bánh xe chịu tải dưới 2-2 hệ xếp gấp 50 (R) - inox",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 595000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CX0050BL-02",
+    "name": "chốt tự động hệ xếp gấp 50 (L)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 270000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CX0050BR-02",
+    "name": "chốt tự động hệ xếp gấp 50 (R)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 270000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CD0128AR-32",
+    "name": "Bộ nối chốt hệ xếp gấp 50 ( R )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 175000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CD0128AL-32",
+    "name": "Bộ nối chốt hệ xếp gấp 50 ( L)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 175000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-ZS0011AR-02",
+    "name": "Tay nắm H50 - Phải",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 355000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-ZS0011AL-02",
+    "name": "Tay nắm H50 - Trái",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 355000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-CD0430CS-50",
+    "name": "Thanh chuyển động bằng nhựa có thể điều chỉnh (43cm)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 33000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-ST0030HB-32",
+    "name": "Thân khóa đơn điểm 9230 + miệng khóa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 335000
+  },
+  {
+    "system": "XepGap",
+    "code": "KS-SX4040RT-38",
+    "name": "Lõi khóa 1 đầu chìa 80/40/40",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 487000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-FB0002CB-32",
+    "name": "Bánh xe trên dẫn hướng slim",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 81000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-SD0710AB-32",
+    "name": "Đầu khóa biên hệ slim",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 74000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-SZ0017BX-64",
+    "name": "Vấu chốt hệ slim",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 41000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-HL6263AB-30",
+    "name": "Bánh xe dưới nhựa 2 con lăn hệ slim",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 212000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-HL6263DB-30",
+    "name": "Bánh xe dưới 4 con lăn inox hệ slim - tải trọng 300 kg",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 527000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-HL6263CB-30",
+    "name": "Bánh xe dưới 4 con lăn nhựa hệ slim",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 288000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-HL6263EB-30",
+    "name": "Bánh xe dưới 8 con lăn inox hệ slim - tải trọng 350 kg",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1035000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-DY0252AL-02",
+    "name": "Tay cầm hệ slim màu bạc ( L )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 446000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-DY0252BL-02",
+    "name": "Tay cầm hệ slim màu bạc ( R )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 446000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-DY0252AL-03",
+    "name": "Tay cầm hệ slim ( trái ) -đen",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 480000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-DY0252BL-03",
+    "name": "Tay cầm hệ slim ( phải ) - đen",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 480000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-SG0018AX-64",
+    "name": "Đầu T slim trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 38000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-SG0050AX-64",
+    "name": "đầu nối tay nắm và thanh chuyển động hệ 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 67000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-DY0253AL-02",
+    "name": "Tay phụ hệ slim màu bạc",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 369000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-DY0253AL-03",
+    "name": "Tay nắm Slim phụ - màu đen",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 390000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KS-SG0050AX-64",
+    "name": "đầu nối tay nắm và thanh chuyển động hệ 50",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 67000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KVCK138",
+    "name": "Ke vĩnh cửu Khung T138 (14x32) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7800
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KVCC138",
+    "name": "Ke vĩnh cửu Cánh T138 (14x20.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KVCK50",
+    "name": "Ke vĩnh cửu Khung xếp gấp 50 (14x55.5) - hệ cửa sổ",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 10200
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "KVCC50",
+    "name": "Ke vĩnh cửu Cánh xếp gấp 50 (14x21.8)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5000
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "kbch-163h",
+    "name": "Ke tăng cứng 16mm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1200
+  },
+  {
+    "system": "SlimNgoaiThat",
+    "code": "kbch-24h",
+    "name": "ke tăng cứng 24mm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1500
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-ZS0002CL-02",
+    "name": "Tay nắm cửa sổ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 299000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD1030SX-62",
+    "name": "Thân khóa truyền động 2 chiều tim 30mm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 198000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SG0007AX-62",
+    "name": "đầu chốt khóa biên",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 36000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SZ0014PX-62",
+    "name": "Đầu chốt khóa mở quay ( vấu hãm )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 29000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CX0004BX-62",
+    "name": "Chốt trên dưới ( đầu khóa chốt cp trên dưới )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 69000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SZ0017LX-62",
+    "name": "hố chốt khóa trên dưới",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 53000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-JL0414LB-32",
+    "name": "bản lề ma sát 12inch L",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 160000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-JL0414RB-32",
+    "name": "bản lề ma sát 12inch R",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 160000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-JL0183LB-32",
+    "name": "bản lề ma sát chịu tải 14inch L",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 195000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-JL0183RB-32",
+    "name": "bản lề ma sát chịu tải 14inch R",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 195000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-ZS0002RL-02",
+    "name": "Tay nắm 85 mm",
+    "unit": "bộ",
+    "grp": "",
+    "price": 1133000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-GS0232BL-02",
+    "name": "chốt âm cửa lùa to",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 195000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-GS0007AL-02",
+    "name": "Chốt âm cửa lùa nhỏ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 125000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-ZS0063CL-02",
+    "name": "tay nắm không đế",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 255000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-KS0232BL-02",
+    "name": "chốt âm giả to",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 160000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SX3555RT-38",
+    "name": "lõi khóa 3555 - mở ngoài",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 539000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SX5535RT-38",
+    "name": "lõi khóa 5535 - mở trong",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 539000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD1035SX-62",
+    "name": "Thân khóa truyền động 2 chiều tim 35mm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 209000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-FZ0110AL-02",
+    "name": "Dây cáp L",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 98000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-FZ0110AR-02",
+    "name": "Dây cáp R",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 98000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SG0010TX-62",
+    "name": "đầu khóa biên cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 50000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SZ0004TX-62",
+    "name": "Đế chốt khóa cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 21000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SG0003DX-63",
+    "name": "đầu nối T cửa sổ trượt , 55S trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 34000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SG0003AX-63",
+    "name": "đầu nối T cửa đi trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 34000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-LS0450AL-02",
+    "name": "Tay cầm cửa trượt + bộ ốc vít",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 800000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SX0004DL-02",
+    "name": "Nắp lõi khóa+bộ vít đầy đủ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 125000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-PK0001PL-02",
+    "name": "kẹp chống giật cửa ( Hít cửa đi quay ngắn)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 320000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-SZ0023PX-62",
+    "name": "đệm chống xệ cửa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 39000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HY0068AX-C1",
+    "name": "Bản lề rãnh C có căn chỉnh khe hở ( Bạc ) -Vế trái",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 279000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HY0068AX-C2",
+    "name": "Bản lề rãnh C có căn chỉnh khe hở ( Bạc )-Vế phải",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 279000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HL6263AB-30.4",
+    "name": "Bánh xe (16x34x180 - 2 con lăn tải trọng 110kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 102000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HL6263AB-30.5",
+    "name": "Bánh xe (16x34x275 - 4 con lăn nhựa tải trọng 160kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 184000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HL6263AB-30.6",
+    "name": "Bánh xe (16x34x275 - 4 con lăn inox tải trọng 300kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HL6263AB-30.2",
+    "name": "Bánh xe (15x28x155 - 2 con lăn tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HL6263AB-30.1",
+    "name": "Bánh xe dùng cho bản ray cửa sổ \n (15x20x145 - 2con lăn tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-HL6263AB-30.3",
+    "name": "Bánh xe dùng cho bản ray cửa đi\n (15x29x260 - 4 con lăn tải trọng 120kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 165000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-CT",
+    "name": "Thân khóa to móc 6mm đơn điểm \n (dùng cho cửa trượt ,kèm miệng khóa)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 289000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-CN6",
+    "name": "Thân khóa nhỏ móc 6mm đơn điểm \n (dùng cho cửa trượt ,kèm miệng khóa)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 289000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-CN10",
+    "name": "Thân khóa nhỏ móc 10mm đơn điểm \n (dùng cho cửa trượt ,kèm miệng khóa)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 289000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-D6",
+    "name": "Thân khóa to móc 6mm đa điểm \n (dùng cho cửa trượt ,kèm miệng khóa)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 299000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-D10",
+    "name": "Thân khóa to móc 10mm đa điểm \n (dùng cho cửa trượt ,kèm miệng khóa)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 299000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-C1",
+    "name": "Thân khóa đúc đơn điểm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 345000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-CD0145BX-C2",
+    "name": "Thân khóa đúc đa điểm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 365000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-FB0002CB-32.1",
+    "name": "Bánh xe dẫn hướng cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 42000
+  },
+  {
+    "system": "Kerssenberg",
+    "code": "KS-NNCD01",
+    "name": "Chống đập cánh cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 18000
+  },
+  {
+    "system": "Govro",
+    "code": "GKT01",
+    "name": "Bộ khóa cửa trượt 01 ( thân khóa 2 móc,miệng khóa,lõi khóa 60mm,bộ chốt khóa âm)",
+    "unit": "bộ",
+    "grp": "",
+    "price": 762000
+  },
+  {
+    "system": "Govro",
+    "code": "GKT02",
+    "name": "Bộ khóa cửa trượt 02 ( thân khóa 2 móc,miệng khóa,lõi khóa 70mm,bộ nắp khóa,2 tay cầm)",
+    "unit": "bộ",
+    "grp": "",
+    "price": 1232000
+  },
+  {
+    "system": "Govro",
+    "code": "GTS01B",
+    "name": "chốt sập cửa sổ 1 mặt - bạc",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 140000
+  },
+  {
+    "system": "Govro",
+    "code": "GTT01B",
+    "name": "Tay cầm cửa trượt - bạc",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 347000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB02",
+    "name": "Bánh xe loại 2 con lăn dùng cho cửa sổ,\n ( dùng cho hệ ray 5mm - tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB03",
+    "name": "Bánh xe loại 2 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm - tải trọng 110kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 102000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB04",
+    "name": "Bánh xe loại 4 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm-tải trọng 160kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 184000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB04A",
+    "name": "Bánh xe loại 4 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm - bx inox TT 300 kg )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB01",
+    "name": "bánh xe chống rung cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 22000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB05",
+    "name": "Bánh xe lùa 55 anode - dùng cho cửa sổ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB06",
+    "name": "Bánh xe 4 con lăn hệ 55 bánh xe nhựa tải trọng 120kg/ cánh",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 165000
+  },
+  {
+    "system": "Banhxe",
+    "code": "GTB01A",
+    "name": "bánh xe dẫn hướng+chống nhấc cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 44000
+  },
+  {
+    "system": "Govro",
+    "code": "GTT02",
+    "name": "Thân khóa to đơn điểm cửa trượt miệng móc 6mm\n ( đã bao gồm miệng khóa )",
+    "unit": "bộ",
+    "grp": "",
+    "price": 289000
+  },
+  {
+    "system": "Govro",
+    "code": "GTT02-D10",
+    "name": "Thân khóa to đa điểm cửa trượt miệng móc 10mm\n ( đã bao gồm miệng khóa )",
+    "unit": "bộ",
+    "grp": "",
+    "price": 299000
+  },
+  {
+    "system": "Govro",
+    "code": "GTT02-D6",
+    "name": "Thân khóa to đa điểm cửa trượt miệng móc 6mm\n ( đã bao gồm miệng khóa )",
+    "unit": "bộ",
+    "grp": "",
+    "price": 299000
+  },
+  {
+    "system": "Govro",
+    "code": "GTT04",
+    "name": "Thân khóa nhỏ đơn điểm cửa trượt miệng móc 6mm",
+    "unit": "bộ",
+    "grp": "",
+    "price": 289000
+  },
+  {
+    "system": "Govro",
+    "code": "GTT04-10",
+    "name": "Thân khóa nhỏ đơn điểm cửa trượt miệng móc 10mm",
+    "unit": "bộ",
+    "grp": "",
+    "price": 289000
+  },
+  {
+    "system": "Govro",
+    "code": "GTNB",
+    "name": "bộ nắp lõi khóa -bạc",
+    "unit": "bộ",
+    "grp": "",
+    "price": 63000
+  },
+  {
+    "system": "Govro",
+    "code": "GTD03",
+    "name": "Chốt khóa âm cửa lùa 2 mặt có chìa khóa\n ( dùng thân khóa đi kèm)",
+    "unit": "bộ",
+    "grp": "",
+    "price": 265000
+  },
+  {
+    "system": "Govro",
+    "code": "GDL70",
+    "name": "lõi khóa 70mm (35/35) 1 đầu chìa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 250000
+  },
+  {
+    "system": "Govro",
+    "code": "GDL60",
+    "name": "lõi khóa 60mm (30/30) 1 đầu chìa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 245000
+  },
+  {
+    "system": "Govro",
+    "code": "GTD01B",
+    "name": "chốt sập cửa đi 1 mặt - bạc",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 178000
+  },
+  {
+    "system": "Govro",
+    "code": "KS-CT01",
+    "name": "Đầu nối biên cửa trượt rãnh C",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 25000
+  },
+  {
+    "system": "Govro",
+    "code": "KS-SG0003DX-63",
+    "name": "đầu nối T cửa sổ trượt , 55S trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 34000
+  },
+  {
+    "system": "Govro",
+    "code": "KS-SG0003AX-63",
+    "name": "đầu nối T cửa đi trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 34000
+  },
+  {
+    "system": "Govro",
+    "code": "GVT",
+    "name": "vấu chốt cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 24000
+  },
+  {
+    "system": "Nhua",
+    "code": "GTB5",
+    "name": "Nhựa chống đập cửa lùa",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 19000
+  },
+  {
+    "system": "Ray",
+    "code": "GR1",
+    "name": "Ray inox dùng cho hệ xếp gấp (6m)",
+    "unit": "cây",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "Ray",
+    "code": "GR2",
+    "name": "Ray inox dùng cho hệ trượt slim 138 và cửa trượt anode (6m)",
+    "unit": "cây",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "Ray",
+    "code": "GR3",
+    "name": "Thanh nhôm bọc inox cửa trượt hệ thường (6m)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "Ray",
+    "code": "GR4",
+    "name": "Ray inox trượt lật opk-6m",
+    "unit": "thanh",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZDS01",
+    "name": "Zoang đệm sập EPDM nhập khẩu ( 1 cuộn 250m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 450000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZCD01",
+    "name": "Zoang cánh (chống va khung ) cửa đi trượt EPDM nhập khẩu (1 cuộn 10kg -EPF-488-4.6)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 995000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZCS01",
+    "name": "zoang cánh cửa sổ trượt EPDM nhập khẩu (1 cuộn 10kg-EPF-577-3.2)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 995000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZKQ02A",
+    "name": "Zoang khung dấu hỏi FOAM 2 TP nhập khẩu (1 cuộn 10kg(135m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 1680000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZKQ04A",
+    "name": "Zoang khung nhập khẩu EFK-76-3.8 (380m/cuộn)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 1680000
+  },
+  {
+    "system": "Zoang",
+    "code": "EFE-41-4.1",
+    "name": "Zoang móc cánh cửa trượt nhôm kogen - 1 cuộn 3kg",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 495000
+  },
+  {
+    "system": "Zoang",
+    "code": "EFK-121-3.5",
+    "name": "Zoang khung bao viền ngoài kogen - 1 cuộn 3 kg",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 495000
+  },
+  {
+    "system": "Zoang",
+    "code": "EPG-265-19",
+    "name": "zoang che rãnh phụ kiện 68",
+    "unit": "md",
+    "grp": "",
+    "price": 14900
+  },
+  {
+    "system": "Zoang",
+    "code": "EPF-406-14",
+    "name": "zoang to đố động xếp gấp 68",
+    "unit": "md",
+    "grp": "",
+    "price": 17800
+  },
+  {
+    "system": "Zoang",
+    "code": "EPE-314-4.8",
+    "name": "zoang cánh xếp gấp 50 -1",
+    "unit": "md",
+    "grp": "",
+    "price": 4400
+  },
+  {
+    "system": "Zoang",
+    "code": "EPF-433-5",
+    "name": "zoang cánh xếp gấp 50 -2",
+    "unit": "md",
+    "grp": "",
+    "price": 4700
+  },
+  {
+    "system": "Zoang",
+    "code": "EFF-20-5.4",
+    "name": "zoang khung xếp gấp",
+    "unit": "md",
+    "grp": "",
+    "price": 4900
+  },
+  {
+    "system": "Zoang",
+    "code": "E3891",
+    "name": "zoang khung xg 68, xg50",
+    "unit": "md",
+    "grp": "",
+    "price": 19900
+  },
+  {
+    "system": "Zoang",
+    "code": "EPF-407-2.7",
+    "name": "zoang nhỏ đố động xếp gấp 68",
+    "unit": "md",
+    "grp": "",
+    "price": 4600
+  },
+  {
+    "system": "Zoang",
+    "code": "EPJ-79-6.5",
+    "name": "zoang rãnh 1 đố động 68",
+    "unit": "md",
+    "grp": "",
+    "price": 10300
+  },
+  {
+    "system": "Zoang",
+    "code": "EPG-32-18.5",
+    "name": "zoang rãnh 2 đố động xg68",
+    "unit": "md",
+    "grp": "",
+    "price": 16800
+  },
+  {
+    "system": "Zoang",
+    "code": "EPE-134-2.6",
+    "name": "zoang cánh xếp gấp 68 -2",
+    "unit": "md",
+    "grp": "",
+    "price": 1700
+  },
+  {
+    "system": "Zoang",
+    "code": "EPJ-96-16.8",
+    "name": "zoang che rãnh slim",
+    "unit": "md",
+    "grp": "",
+    "price": 11800
+  },
+  {
+    "system": "Zoang",
+    "code": "EFA-59-168A",
+    "name": "Zoang chèn rãnh slim 138( mới)",
+    "unit": "md",
+    "grp": "",
+    "price": 18300
+  },
+  {
+    "system": "Zoang",
+    "code": "EPJ-97-11",
+    "name": "zoang che rãnh đấu cánh slim",
+    "unit": "md",
+    "grp": "",
+    "price": 5400
+  },
+  {
+    "system": "Zoang",
+    "code": "EPJ-103-16.2",
+    "name": "zoang che rãnh phụ kiện C (142m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 995000
+  },
+  {
+    "system": "Zoang",
+    "code": "EFM-128-15.2",
+    "name": "Zoang trượt lật dấu hỏi",
+    "unit": "m",
+    "grp": "",
+    "price": 39000
+  },
+  {
+    "system": "Zoang",
+    "code": "EPJ-157-24.1",
+    "name": "Zoang che rãnh K-55s 100m/cuộn 10kg",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 995000
+  },
+  {
+    "system": "Zoang",
+    "code": "ZK2",
+    "name": "Zoang khung trượt lật - zoang lá",
+    "unit": "m",
+    "grp": "",
+    "price": 2900
+  },
+  {
+    "system": "Zoang",
+    "code": "EFK-96-4.2",
+    "name": "Zoang khung trượt lật - Zoang ống",
+    "unit": "m",
+    "grp": "",
+    "price": 4800
+  },
+  {
+    "system": "Zoang",
+    "code": "EFE-37.4",
+    "name": "Zoang móc cánh cửa trượt kenwin / anode - 1 cuộn 3kg",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 490000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZVK",
+    "name": "Zoang chèn sập vách trượt lật",
+    "unit": "m",
+    "grp": "",
+    "price": 8400
+  },
+  {
+    "system": "Zoang",
+    "code": "GZ66",
+    "name": "Zoang lông 6*6 - hệ lùa 55s",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 295000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZ75",
+    "name": "zoang lông 7*5 ( 250m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 295000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZ36-05",
+    "name": "Zoang lông 3,5 x 6 - 1 cuộn 250m",
+    "unit": "Cuộn",
+    "grp": "",
+    "price": 305000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZ56",
+    "name": "zoang lông 5*6 (250m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 295000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZ96-01",
+    "name": "Zoang lông 9*6 ( cửa trượt,slim138 ) - 250m",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 315000
+  },
+  {
+    "system": "Zoang",
+    "code": "GZ59",
+    "name": "Zoang lông 5*9 - 300 m (dùng cánh ngang trên, cửa sổ trượt anode )",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 390000
+  },
+  {
+    "system": "Nhua",
+    "code": "GN01C",
+    "name": "nhựa thoát nước che rãnh phụ kiện rãnh C",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1400
+  },
+  {
+    "system": "Nhua",
+    "code": "GN01K",
+    "name": "nhựa thoát nước che rãnh phụ kiện rãnh K",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1400
+  },
+  {
+    "system": "Nhua",
+    "code": "GN02",
+    "name": "bịt thoát nước",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1400
+  },
+  {
+    "system": "Nhua",
+    "code": "GN6030",
+    "name": "nhựa chống đập cửa lùa 60x30\n ( dùng cho 55s, anod)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 5500
+  },
+  {
+    "system": "Nhua",
+    "code": "GN4742",
+    "name": "nhựa chống đập cửa lùa 60x30\n ( dùng cho kogen, slim 138)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 5500
+  },
+  {
+    "system": "Nhua",
+    "code": "GZN",
+    "name": "thanh nhựa ốp dài 4.8m\n (nhựa nguyên sinh nhập khẩu - SP-113-16.6)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 35000
+  },
+  {
+    "system": "OPK",
+    "code": "CN122669B",
+    "name": "Bộ phụ kiện dùng cho cánh đơn\nA01-G Single door kit CN122669B",
+    "unit": "Set",
+    "grp": "",
+    "price": 1937000
+  },
+  {
+    "system": "OPK",
+    "code": "TN1098A",
+    "name": "Bộ Phụ kiện dùng cho cánh giữa bộ 3 cánh\nA02-G Single door kit with telescopic accessories TN1098A",
+    "unit": "Set",
+    "grp": "",
+    "price": 1699000
+  },
+  {
+    "system": "OPK",
+    "code": "CN122788A",
+    "name": "Bộ phụ kiện dùng cho các cánh giữa bộ từ 4 cánh trở lên A02-G Single door kit with telescopic accessories CN122788A",
+    "unit": "Set",
+    "grp": "",
+    "price": 2163000
+  },
+  {
+    "system": "OPK",
+    "code": "CN122914A",
+    "name": "Bộ phụ kiện dùng cho cánh fix CN122914A",
+    "unit": "Set",
+    "grp": "",
+    "price": 450000
+  },
+  {
+    "system": "OPK",
+    "code": "CJ130124A",
+    "name": "Bộ phụ kiện dùng cho cửa âm tường\nA20 pocket door accessories CJ130124A",
+    "unit": "Set",
+    "grp": "",
+    "price": 1564000
+  },
+  {
+    "system": "OPK",
+    "code": "CN122716A",
+    "name": "Bộ phụ kiện cửa quay A60 swing door CN122716A",
+    "unit": "Set",
+    "grp": "",
+    "price": 838000
+  },
+  {
+    "system": "OPK",
+    "code": "CJ130104A",
+    "name": "Bộ cửa trượt 1 cánh ( Trái) CJ130104A",
+    "unit": "Set",
+    "grp": "",
+    "price": 1898000
+  },
+  {
+    "system": "OPK",
+    "code": "CJ130105A",
+    "name": "Bộ cửa trượt 1 cánh (Phải) CJ130105A",
+    "unit": "Set",
+    "grp": "",
+    "price": 1898000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-NNA519",
+    "name": "Tay D kéo",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 179000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A542",
+    "name": "Tay khóa cửa mở quay OPK- A542",
+    "unit": "bộ",
+    "grp": "",
+    "price": 884000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-NNA517",
+    "name": "Tay D kéo có chốt móc",
+    "unit": "bộ",
+    "grp": "",
+    "price": 390000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A607",
+    "name": "Kìm kẹp dây OPK-A607",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1890000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A606",
+    "name": "Dưỡng khoan lỗ vít cánh OPK-A606",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 14000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A506",
+    "name": "Ke tăng cứng OPK-A506",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A504",
+    "name": "Ke bắt khung cửa quay OPK- A504",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 4000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A503",
+    "name": "Vít nối góc cánh OPK-A503",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A501",
+    "name": "Nhựa nối ray OPK-A501",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A502",
+    "name": "Nhựa đóng ốp ray OPK- A502",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1000
+  },
+  {
+    "system": "OPK",
+    "code": "OPK-A408",
+    "name": "Nhựa giữ kính 8mm dài 3,5m",
+    "unit": "thanh",
+    "grp": "",
+    "price": 37000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-G",
+    "name": "Bộ phụ kiện cửa trượt 2 cánh slim OPK thế hệ mới chống rung lắc bao gồm 2 set phụ kiện A01-G\nSingle door kit CN122669B Bao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 4062000
+  },
+  {
+    "system": "OPK",
+    "code": "A02-G",
+    "name": "Bộ phụ kiện cửa trượt 3 cánh slim OPK thế hệ mới chống rung lắc bao gồm :\n2 set A01-G Single door kit CN122669B\n1 set A02-G Single door kit with telescopic accessories TN1098A\nBao gồm vít , nhựa nối và\nnhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 5803000
+  },
+  {
+    "system": "OPK",
+    "code": "A02-G4",
+    "name": "Bộ phụ kiện cửa trượt 4 cánh slim OPK thế hệ mới chống rung lắc bao gồm :\n2 set A01-G Single door kit CN122669B\n2 set A02-G Single door kit with telescopic accessories CN122788A\nBao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 8544000
+  },
+  {
+    "system": "OPK",
+    "code": "A02-G5",
+    "name": "Bộ phụ kiện cửa trượt 5 cánh slim OPK thế hệ mới chống rung lắc bao gồm :\n2 set A01-G Single door kit CN122669B\n3 set A02-G Single door kit with telescopic accessories CN122788A\nBao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 10856000
+  },
+  {
+    "system": "OPK",
+    "code": "A02-G6",
+    "name": "Bộ phụ kiện cửa trượt 6 cánh slim OPK thế hệ mới chống rung lắc bao gồm :\n2 set A01-G Single door kit CN122669B\n4 set A02-G Single door kit with telescopic accessories CN122788A\nBao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 13282000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-AL",
+    "name": "Bộ phụ kiện cửa trượt 1 cánh slim OPK thế hệ mới chống rung lắc gồm 1 set CJ130104A dùng cho cửa bên trái\nBao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 1994000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-AR",
+    "name": "Bộ phụ kiện cửa trượt 1 cánh slim OPK thế hệ mới chống rung lắc gồm 1 set CJ130105A dùng cho cửa bên phải\nBao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 1994000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-A",
+    "name": "Bộ phụ kiện cửa trượt 1 cánh\n âm tường slim OPK thế hệ mới chống rung lắc bao gồm: 1 set phụ kiện A01-G\nSingle door kit CN122669B và 1 set CJ130124A\nBao gồm vít , nhựa nối và nhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 3566000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-A2",
+    "name": "Bộ phụ kiện cửa trượt 2 cánh\n âm tường slim OPK thế hệ mới chống rung lắc bao gồm: 1 set A01-G Single door kit CN122669B\n1 set A02-G Single door kit with telescopic accessories CN122788A\nvà 1 set CJ130124A Bao gồm vít , nhựa nối và\nnhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 5781000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-A3",
+    "name": "Bộ phụ kiện cửa trượt 3 cánh\n âm tường slim OPK thế hệ mới chống rung lắc bao gồm: 1 set A01-G Single door kit CN122669B\n2 set A02-G Single door kit with telescopic accessories TN1098A\nvà 1 set CJ130124A Bao gồm vít , nhựa nối và\nnhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 8134000
+  },
+  {
+    "system": "OPK",
+    "code": "A60",
+    "name": "Bộ phụ kiện mở quay 1 cánh OPK bao gồm 1 set A60 swing door - CN122716A và 1 bộ tay nắm OPK-A542",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 1888000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-F21",
+    "name": "Bộ phụ kiện cửa trượt 2  cánh trượt + 1 cánh fix slim OPK thế hệ mới chống rung lắc bao gồm:\n1 set A01-G Single door kit CN122669B\n1 set A02-G Single door kit with telescopic accessories CN122788A\nvà 1 set CN122914A Bao gồm vít , nhựa nối và\nnhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 4750000
+  },
+  {
+    "system": "OPK",
+    "code": "A01-F31",
+    "name": "Bộ phụ kiện cửa trượt 3  cánh trượt + 1 cánh fix slim OPK thế hệ mới chống rung lắc bao gồm:\n1 set A01-G Single door kit CN122669B\n2 set A02-G Single door kit with telescopic accessories CN122788A\nvà 1 set CN122752A Bao gồm vít , nhựa nối và\nnhựa giữ kính",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 6990000
+  },
+  {
+    "system": "OPK",
+    "code": "CE020001-001",
+    "name": "Bộ phụ kiện trượt lật OPK bao gồm hệ thống 2 bánh xe dưới, 2 bánh xe dẫn hướng trên, hệ thống chốt vấu linh động\n( chưa bao gồm tay nắm )\nNote: với bộ cửa rộng hơn 1m cao hơn 2,6m vui lòng liên hệ hotline 0985863139 để được tư vấn cụ thể",
+    "unit": "Bộ",
+    "grp": "",
+    "price": 4631000
+  },
+  {
+    "system": "Ke",
+    "code": "KVC4.0",
+    "name": "Ke vĩnh cửu hệ 60 - khung cửa sổ quay (25x40) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 10600
+  },
+  {
+    "system": "Ke",
+    "code": "KVC4.05",
+    "name": "Ke vĩnh cửu hệ 60 - cánh cửa sổ quay (25x40.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 9600
+  },
+  {
+    "system": "Ke",
+    "code": "KVC4.0A",
+    "name": "Ke vĩnh cửu hệ 60 - khung cửa đi quay  (31x40) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "Ke",
+    "code": "KVCL4.05",
+    "name": "Ke vĩnh cửu hệ 60 - cánh cửa đi quay (31x40.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "Ke",
+    "code": "KVC3.8",
+    "name": "Ke vĩnh cửu hệ 115+171 - khung cửa đi lùa (14x38)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 6500
+  },
+  {
+    "system": "Ke",
+    "code": "KVCCT4.05",
+    "name": "Ke vĩnh cửu hệ 115+171 - cánh cửa đi lùa (31x40.5) - 1 vít chính tâm",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "Ke",
+    "code": "KVC4.1",
+    "name": "Ke vĩnh cửu hệ 93 - khung cửa sổ lùa (14x41)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7200
+  },
+  {
+    "system": "Ke",
+    "code": "KVC3.05R",
+    "name": "Ke vĩnh cửu hệ 93 - cánh cửa sổ lùa sập rời (14x30.5)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5800
+  },
+  {
+    "system": "Ke",
+    "code": "KVCK138",
+    "name": "Ke vĩnh cửu Khung T138 (14x32) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7800
+  },
+  {
+    "system": "Ke",
+    "code": "KVCC138",
+    "name": "Ke vĩnh cửu Cánh T138 (14x20.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5000
+  },
+  {
+    "system": "Ke",
+    "code": "KVCK50",
+    "name": "Ke vĩnh cửu Khung xếp gấp 50 (14x55.5) - hệ cửa sổ",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 10200
+  },
+  {
+    "system": "Ke",
+    "code": "KVCC50",
+    "name": "Ke vĩnh cửu Cánh xếp gấp 50 (14x21.8)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5000
+  },
+  {
+    "system": "Ke",
+    "code": "KVCC68",
+    "name": "Ke vĩnh cửu Cánh xếp gấp 68 (14x63)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 12000
+  },
+  {
+    "system": "Ke",
+    "code": "KVC42K",
+    "name": "Ke vĩnh cửu Khung cửa đi mở quay Kenwin 55s (25x42) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 11200
+  },
+  {
+    "system": "Ke",
+    "code": "KVC43",
+    "name": "Ke vĩnh cửu Khung cửa sổ mở quay Kenwin 55s (14x43) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7200
+  },
+  {
+    "system": "Ke",
+    "code": "KVC26",
+    "name": "Ke vĩnh cửu Khung cửa trượt Kenwin 55s (14x26) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5900
+  },
+  {
+    "system": "Ke",
+    "code": "KVC27",
+    "name": "Ke vĩnh cửu Cánh cửa trượt Kenwin 55s (14x27) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5900
+  },
+  {
+    "system": "Ke",
+    "code": "K31A x 22.5",
+    "name": "Ke vĩnh cửu Khung bao hệ trượt lật - ke to (31x22.5) - vít nhỏ",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 10600
+  },
+  {
+    "system": "Ke",
+    "code": "K10 x 9.5",
+    "name": "Ke vĩnh cửu Khung bao hệ trượt lật - ke nhỏ (10x9.5) - vít nhỏ",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5000
+  },
+  {
+    "system": "Ke",
+    "code": "KVC15.5N",
+    "name": "Ke vĩnh cửu Nẹp hệ trượt lật (14x1.55) - vít nhỏ",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 3900
+  },
+  {
+    "system": "Ke",
+    "code": "KVC42N",
+    "name": "Ke vĩnh cửu Khung cửa đi mở quay 55 (31x42) anode bản Plus",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 14200
+  },
+  {
+    "system": "Ke",
+    "code": "KVC42C",
+    "name": "Ke vĩnh cửu Cánh cửa sổ mở quay 55 anode (25x42) - 1 vít lệch như XF",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 11000
+  },
+  {
+    "system": "Ke",
+    "code": "KVC3.2N",
+    "name": "Ke vĩnh cửu Cánh cửa trượt hệ 93 anode (25x32) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 8100
+  },
+  {
+    "system": "Ke",
+    "code": "KVC39N",
+    "name": "Ke vĩnh cửu Cánh cửa đi mở quay 55 (39 x 40) - 2 vít anode bản Plus",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 15500
+  },
+  {
+    "system": "Ke",
+    "code": "KVC39",
+    "name": "Ke vĩnh cửu 14 x 39",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 6800
+  },
+  {
+    "system": "Ke",
+    "code": "KVC3.05",
+    "name": "Ke vĩnh cửu 25 x 30.5 sập liền",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7900
+  },
+  {
+    "system": "Ke",
+    "code": "KVC.40X31.V1-1 lỗ cân",
+    "name": "ke cánh  trượt quay 2 chiều",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13300
+  },
+  {
+    "system": "Ke",
+    "code": "D4.0",
+    "name": "Ke khung Cửa đi mở quay (hệ 60)\nKe cánh Cửa đi mở quay - Cánh mở lùa 4.0 (hệ 60)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "S4.0",
+    "name": "Ke khung cửa sổ mở quay (hệ 60)\nKe cánh cửa sổ mở quay 4.0 (hệ 60)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "K3.8",
+    "name": "Ke khung Cửa đi lùa to 3.8 (hệ 115 và 171)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "K1.6",
+    "name": "Ke khung Cửa đi lùa bé 1.6 (hệ 115 và 171)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "K4.1",
+    "name": "Ke khung Cửa sổ lùa 4.1 (hệ 93)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "K3.05",
+    "name": "Ke cánh Cửa sổ lùa 3.05 (hệ 93)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "K4.7",
+    "name": "Ke đảo cánh/vách (hệ 60)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "S4.2",
+    "name": "Ke khung cửa đi mở quay Kenwin 55s",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "K43",
+    "name": "Ke khung cửa sổ mở quay Kenwin 55s",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "D4.2",
+    "name": "Ke thành phẩm Khung cửa đi mở quay 55 anode bản Plus (31x42)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "KETLTP",
+    "name": "Ke cánh thủy lực thành phẩm (31x54.5)",
+    "unit": "kg",
+    "grp": "",
+    "price": 120600
+  },
+  {
+    "system": "Ke",
+    "code": "KTCQ",
+    "name": "Ke tăng cứng bản 1,0 hệ thường",
+    "unit": "kg",
+    "grp": "",
+    "price": 87000
+  },
+  {
+    "system": "Ke",
+    "code": "KTC41",
+    "name": "KTC 1.5 cm hệ anode",
+    "unit": "kg",
+    "grp": "",
+    "price": 82200
+  },
+  {
+    "system": "Ke",
+    "code": "KTC43",
+    "name": "KTC 1 cm hệ lùa 55s",
+    "unit": "kg",
+    "grp": "",
+    "price": 82200
+  },
+  {
+    "system": "Ke",
+    "code": "KVC26.1N",
+    "name": "Ke vĩnh cửu Cánh trượt lật (19.8x26.1) - vít nhỏ",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 16200
+  },
+  {
+    "system": "Ke",
+    "code": "D3.9",
+    "name": "Ke thành phẩm Cánh cửa đi mở quay 55 anode (39x40)",
+    "unit": "kg",
+    "grp": "",
+    "price": 127900
+  },
+  {
+    "system": "Ke",
+    "code": "KEKTL",
+    "name": "Ke khung thủy lực (thanh) - ke V 20*30 Cây dài 3m, tỉ trọng khoảng 1,15kg",
+    "unit": "kg",
+    "grp": "",
+    "price": 112300
+  },
+  {
+    "system": "Ke",
+    "code": "kbch-163h",
+    "name": "Ke tăng cứng 16mm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1200
+  },
+  {
+    "system": "Ke",
+    "code": "kbch-24h",
+    "name": "ke tăng cứng 24mm",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 1500
+  },
+  {
+    "system": "VT55s",
+    "code": "GZ56",
+    "name": "zoang lông 5*6 (250m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 295000
+  },
+  {
+    "system": "VT55s",
+    "code": "GZ36-05",
+    "name": "Zoang lông 3,5 x 6 - 1 cuộn 250m",
+    "unit": "Cuộn",
+    "grp": "",
+    "price": 305000
+  },
+  {
+    "system": "VT55s",
+    "code": "gz75",
+    "name": "zoang lông 7*5 ( 250m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 295000
+  },
+  {
+    "system": "VT55s",
+    "code": "gz96-01",
+    "name": "Zoang lông 9*6 ( cửa trượt,slim138 ) - 250m",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 315000
+  },
+  {
+    "system": "VT55s",
+    "code": "GZCS01",
+    "name": "zoang cánh cửa sổ trượt EPDM nhập khẩu (1 cuộn 10kg-EPF-577-3.2)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 995000
+  },
+  {
+    "system": "VT55s",
+    "code": "GR3",
+    "name": "Thanh nhôm bọc inox cửa trượt hệ thường (6m)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "VT55s",
+    "code": "GR2",
+    "name": "Ray inox dùng cho hệ trượt slim 138 và cửa trượt anode (6m)",
+    "unit": "cây",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB01A",
+    "name": "bánh xe dẫn hướng+chống nhấc cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 44000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB01",
+    "name": "bánh xe chống rung cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 22000
+  },
+  {
+    "system": "VT55s",
+    "code": "GZN",
+    "name": "thanh nhựa ốp dài 4.8m\n (nhựa nguyên sinh nhập khẩu - SP-113-16.6)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 35000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB05",
+    "name": "Bánh xe lùa 55 anode - dùng cho cửa sổ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT55s",
+    "code": "GR3",
+    "name": "Thanh nhôm bọc inox cửa trượt hệ thường (6m)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 170000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB02",
+    "name": "Bánh xe loại 2 con lăn dùng cho cửa sổ,\n ( dùng cho hệ ray 5mm - tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB03",
+    "name": "Bánh xe loại 2 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm - tải trọng 110kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 102000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB04",
+    "name": "Bánh xe loại 4 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm-tải trọng 160kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 184000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB04A",
+    "name": "Bánh xe loại 4 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm - bx inox TT 300 kg )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB05",
+    "name": "Bánh xe lùa 55 anode - dùng cho cửa sổ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB06",
+    "name": "Bánh xe 4 con lăn hệ 55 bánh xe nhựa tải trọng 120kg/ cánh",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 165000
+  },
+  {
+    "system": "VT55s",
+    "code": "KTC43",
+    "name": "KTC 1 cm hệ lùa 55s",
+    "unit": "kg",
+    "grp": "",
+    "price": 82200
+  },
+  {
+    "system": "VT55s",
+    "code": "ktc41",
+    "name": "KTC 1.5 cm hệ anode",
+    "unit": "kg",
+    "grp": "",
+    "price": 82200
+  },
+  {
+    "system": "VT55s",
+    "code": "EFE-37.4",
+    "name": "Zoang móc cánh cửa trượt kenwin / anode - 1 cuộn 3kg",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 490000
+  },
+  {
+    "system": "VT55s",
+    "code": "KS-HL6263AB-30.4",
+    "name": "Bánh xe (16x34x180 - 2 con lăn tải trọng 110kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 102000
+  },
+  {
+    "system": "VT55s",
+    "code": "KS-HL6263AB-30.5",
+    "name": "Bánh xe (16x34x275 - 4 con lăn nhựa tải trọng 160kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 184000
+  },
+  {
+    "system": "VT55s",
+    "code": "KS-HL6263AB-30.6",
+    "name": "Bánh xe (16x34x275 - 4 con lăn inox tải trọng 300kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "VT55s",
+    "code": "KS-HL6263AB-30.2",
+    "name": "Bánh xe (15x28x155 - 2 con lăn tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT55s",
+    "code": "KS-HL6263AB-30.1",
+    "name": "Bánh xe dùng cho bản ray cửa sổ \n (15x20x145 - 2con lăn tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT55s",
+    "code": "KS-HL6263AB-30.3",
+    "name": "Bánh xe dùng cho bản ray cửa đi\n (15x29x260 - 4 con lăn tải trọng 120kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 165000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB05",
+    "name": "Bánh xe lùa 55 anode - dùng cho cửa sổ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT55s",
+    "code": "GTB06",
+    "name": "Bánh xe 4 con lăn hệ 55 bánh xe nhựa tải trọng 120kg/ cánh",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 165000
+  },
+  {
+    "system": "VT60",
+    "code": "GZDS01",
+    "name": "Zoang đệm sập EPDM nhập khẩu ( 1 cuộn 250m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 450000
+  },
+  {
+    "system": "VT60",
+    "code": "GZKQ04A",
+    "name": "Zoang khung nhập khẩu EFK-76-3.8 (380m/cuộn)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 1680000
+  },
+  {
+    "system": "VT60",
+    "code": "EPJ-103-16.2",
+    "name": "zoang che rãnh phụ kiện C (142m)",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 995000
+  },
+  {
+    "system": "VT60",
+    "code": "EFK-121-3.5",
+    "name": "Zoang khung bao viền ngoài kogen - 1 cuộn 3 kg",
+    "unit": "cuộn",
+    "grp": "",
+    "price": 495000
+  },
+  {
+    "system": "VT60",
+    "code": "GZN",
+    "name": "thanh nhựa ốp dài 4.8m\n (nhựa nguyên sinh nhập khẩu - SP-113-16.6)",
+    "unit": "thanh",
+    "grp": "",
+    "price": 35000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB02",
+    "name": "Bánh xe loại 2 con lăn dùng cho cửa sổ,\n ( dùng cho hệ ray 5mm - tải trọng 80kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB03",
+    "name": "Bánh xe loại 2 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm - tải trọng 110kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 102000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB04",
+    "name": "Bánh xe loại 4 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm-tải trọng 160kg)",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 184000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB04A",
+    "name": "Bánh xe loại 4 con lăn dùng cho cửa đi\n ( dùng cho hệ ray 5mm - bx inox TT 300 kg )",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 580000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB05",
+    "name": "Bánh xe lùa 55 anode - dùng cho cửa sổ",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 62000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB06",
+    "name": "Bánh xe 4 con lăn hệ 55 bánh xe nhựa tải trọng 120kg/ cánh",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 165000
+  },
+  {
+    "system": "VT60",
+    "code": "GTB01A",
+    "name": "bánh xe dẫn hướng+chống nhấc cửa trượt",
+    "unit": "chiếc",
+    "grp": "",
+    "price": 44000
+  },
+  {
+    "system": "VT60",
+    "code": "KTC43",
+    "name": "KTC 1 cm hệ lùa 55s",
+    "unit": "kg",
+    "grp": "",
+    "price": 82200
+  },
+  {
+    "system": "KVC_55S",
+    "code": "KVC42K",
+    "name": "Ke vĩnh cửu Khung cửa đi mở quay Kenwin 55s (25x42) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 11200
+  },
+  {
+    "system": "KVC_55S",
+    "code": "KVC4.0A",
+    "name": "Ke vĩnh cửu hệ 60 - khung cửa đi quay  (31x40) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "KVC_55S",
+    "code": "KVC43",
+    "name": "Ke vĩnh cửu Khung cửa sổ mở quay Kenwin 55s (14x43) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7200
+  },
+  {
+    "system": "KVC_55S",
+    "code": "KVC4.05",
+    "name": "Ke vĩnh cửu hệ 60 - cánh cửa sổ quay (25x40.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 9600
+  },
+  {
+    "system": "KVC_55S",
+    "code": "KVC26",
+    "name": "Ke vĩnh cửu Khung cửa trượt Kenwin 55s (14x26) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5900
+  },
+  {
+    "system": "KVC_55S",
+    "code": "KVC27",
+    "name": "Ke vĩnh cửu Cánh cửa trượt Kenwin 55s (14x27) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5900
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVC4.0",
+    "name": "Ke vĩnh cửu hệ 60 - khung cửa sổ quay (25x40) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 10600
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVC4.05",
+    "name": "Ke vĩnh cửu hệ 60 - cánh cửa sổ quay (25x40.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 9600
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVC4.0A",
+    "name": "Ke vĩnh cửu hệ 60 - khung cửa đi quay  (31x40) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVCL4.05",
+    "name": "Ke vĩnh cửu hệ 60 - cánh cửa đi quay (31x40.5) - 1 vít lệch",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVC3.8",
+    "name": "Ke vĩnh cửu hệ 115+171 - khung cửa đi lùa (14x38)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 6500
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVCCT4.05",
+    "name": "Ke vĩnh cửu hệ 115+171 - cánh cửa đi lùa (31x40.5) - 1 vít chính tâm",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 13700
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVC4.1",
+    "name": "Ke vĩnh cửu hệ 93 - khung cửa sổ lùa (14x41)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 7200
+  },
+  {
+    "system": "KVC_60",
+    "code": "KVC3.05R",
+    "name": "Ke vĩnh cửu hệ 93 - cánh cửa sổ lùa sập rời (14x30.5)",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5800
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC42N",
+    "name": "Ke vĩnh cửu Khung cửa đi mở quay 55 (31x42) anode bản Plus",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 14200
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC39N",
+    "name": "Ke vĩnh cửu Cánh cửa đi mở quay 55 (39 x 40) - 2 vít anode bản Plus",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 15500
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC42K",
+    "name": "Ke vĩnh cửu Khung cửa đi mở quay Kenwin 55s (25x42) - 2 vít",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 11200
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC39N",
+    "name": "Ke vĩnh cửu Cánh cửa đi mở quay 55 (39 x 40) - 2 vít anode bản Plus",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 15500
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC42C",
+    "name": "Ke vĩnh cửu Cánh cửa sổ mở quay 55 anode (25x42) - 1 vít lệch như XF",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 11000
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC27",
+    "name": "Ke vĩnh cửu Cánh cửa trượt Kenwin 55s (14x27) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 5900
+  },
+  {
+    "system": "KVC_T6",
+    "code": "KVC3.2N",
+    "name": "Ke vĩnh cửu Cánh cửa trượt hệ 93 anode (25x32) - 1 vít cân",
+    "unit": "Chiếc",
+    "grp": "",
+    "price": 8100
+  }
+]
