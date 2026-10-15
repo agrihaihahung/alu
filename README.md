@@ -58,3 +58,7 @@ Nút **Lưu vào Drive** cần một Google Apps Script Web App để lưu PDF v
 6. Lần đầu bấm nút, nhập URL `/exec` và giá trị `SAVE_TOKEN`; ứng dụng lưu hai giá trị trong localStorage của trình duyệt. Mỗi lần lưu sẽ tạo một file PDF và một file JSON mang mã báo giá trong thư mục Drive đã cấu hình. Nếu đổi token, xóa khóa `haihahung_drive_save_token` trong localStorage hoặc xóa dữ liệu trang để nhập lại.
 
 **Bảo mật:** Web App cần quyền tạo file trong Drive. Hãy đặt `SAVE_TOKEN` và chỉ chia sẻ URL Web App cùng token với người dùng đáng tin cậy và tuân thủ chính sách Google Workspace của doanh nghiệp. Nếu chính sách không cho phép truy cập `Anyone`, cần triển khai cơ chế xác thực phù hợp trước khi sử dụng thực tế.
+
+
+## Đăng nhập bảo mật
+Hướng dẫn triển khai tài khoản nội bộ bằng Cloudflare Pages Functions: xem `SECURE_LOGIN_SETUP.md`. Không đặt mật khẩu trong JSON công khai.

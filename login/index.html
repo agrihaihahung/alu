@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#216ba5"><title>Đăng nhập | Hải Hà Hưng</title>
+<link rel="stylesheet" href="/assets/css/login.css">
+<script src="/assets/js/login.js" defer></script>
+</head>
+<body>
+<main class="login-card">
+  <section class="welcome">
+    <div class="brand">HẢI HÀ HƯNG</div>
+    <h2>Chào mừng trở lại!</h2>
+    <p>Một tài khoản làm việc cho hệ thống Hải Hà Hưng.</p>
+    <div class="features">
+      <div class="feature"><span class="feature-icon">ϟ</span><span>Đăng nhập tài khoản nội bộ</span></div>
+      <div class="feature"><span class="feature-icon">▣</span><span>Không gian làm việc riêng</span></div>
+      <div class="feature"><span class="feature-icon">⌂</span><span>Báo giá và quản lý danh mục</span></div>
+    </div>
+    <div class="owl" aria-hidden="true"><div class="owl-mark">HH</div></div>
+  </section>
+  <section class="login-panel">
+    <h1>Đăng nhập</h1>
+    <p class="subheading">Sử dụng tài khoản Hải Hà Hưng của bạn</p>
+    <form id="loginForm" autocomplete="on">
+      <label class="field"><span>Tên đăng nhập</span><input id="username" name="username" autocomplete="username" required autofocus placeholder="Nhập tên đăng nhập"></label>
+      <label class="field"><span>Mật khẩu</span><div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Nhập mật khẩu"><button class="toggle-password" id="togglePassword" type="button" aria-label="Hiện mật khẩu">◉</button></div></label>
+      <p id="loginError" class="login-error" role="alert" hidden></p>
+      <button class="login-submit" id="submitButton" type="submit">Đăng nhập</button>
+    </form>
+    <p class="login-foot">Hệ thống nội bộ <strong>Hải Hà Hưng</strong></p>
+  </section>
+</main>
+</body>
+</html>
