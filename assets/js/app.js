@@ -434,6 +434,29 @@
       al.forEach((x,i) => alRows.push(row([[i+1,'Number'],x.system||'',x.code||'',x.name||'',x.color||'',x.spec||'',x.unit||'Thanh',[n(x.qty),'Number'],[n(x.weight),'Number'],[n(x.qty)*n(x.weight),'Number'],[n(x.price),'Number'],[n(x.qty)*n(x.weight)*n(x.price),'Number'],customerName,quoteDate])));
       const acRows = [row(['STT','Mã hàng','Tên phụ kiện','Nhóm phụ kiện','ĐVT','Số lượng','Đơn giá (đ)','Thành tiền gốc (đ)','Chiết khấu riêng (%)','Tiền chiết khấu riêng (đ)','Được xét CK chung','Thành tiền sau CK riêng (đ)'])];
       ac.forEach((x,i) => { const gross=n(x.qty)*n(x.price), pct=Math.min(100,Math.max(0,n(x.discountPercent))), itemDiscount=gross*pct/100, commonEligible=!!x.discountEligible && pct===0 && p.accessoriesIncluded!==false; acRows.push(row([[i+1,'Number'],x.code||'',x.name||'',x.group||x.spec||'',x.unit||'Cái',[n(x.qty),'Number'],[n(x.price),'Number'],[gross,'Number'],[pct,'Number'],[itemDiscount,'Number'],commonEligible?'Có':'Không',[gross-itemDiscount,'Number']])); });
+      // Sheet tổng hợp: gộp nhôm thanh và phụ kiện vào một bảng phẳng, dễ lọc/in/đưa vào Google Sheets.
+      // Với nhôm, đơn giá theo ĐVT Thanh được quy đổi từ đơn giá/kg x kg/thanh để khớp thành tiền.
+      const consolidatedRows = [row(['Khách hàng','Ngày tháng năm','STT','Tên (nhôm / phụ kiện)','Đơn vị tính','Đơn giá (đ)','Số lượng','Thành tiền (đ)'])];
+      let consolidatedIndex = 1;
+      al.forEach(x => {
+        const qty=n(x.qty), weight=n(x.weight), pricePerKg=n(x.price);
+        const unitPrice=weight*pricePerKg;
+        consolidatedRows.push(row([customerName,quoteDate,[consolidatedIndex++,'Number'],x.name||x.code||'',x.unit||'Thanh',[unitPrice,'Number'],[qty,'Number'],[qty*unitPrice,'Number']]));
+      });
+      const commonEligibleAccessories = ac.filter(x => !!x.discountEligible && Math.min(100,Math.max(0,n(x.discountPercent)))===0);
+      const commonEligibleBase = commonEligibleAccessories.reduce((sum,x)=>sum+n(x.qty)*n(x.price),0);
+      const commonDiscountTotal = Math.min(commonEligibleBase, Math.max(0,n(p.discount?.accessories?.amount ?? t.discountAccessories)));
+      ac.forEach(x => {
+        const qty=n(x.qty), price=n(x.price), pct=Math.min(100,Math.max(0,n(x.discountPercent)));
+        const gross=qty*price;
+        const privateDiscount=gross*pct/100;
+        const commonDiscountEligible=!!x.discountEligible && pct===0 && p.accessoriesIncluded!==false;
+        // Phân bổ chiết khấu chung theo tỷ trọng giá trị từng phụ kiện đủ điều kiện,
+        // để tổng các dòng trong sheet Tổng hợp khớp với tổng thanh toán.
+        const allocatedCommonDiscount=commonDiscountEligible && commonEligibleBase>0 ? commonDiscountTotal*(gross/commonEligibleBase) : 0;
+        const amount=Math.max(0,gross-privateDiscount-allocatedCommonDiscount);
+        consolidatedRows.push(row([customerName,quoteDate,[consolidatedIndex++,'Number'],x.name||x.code||'',x.unit||'Cái',[qty ? amount/qty : price,'Number'],[qty,'Number'],[amount,'Number']]));
+      });
       const summaryRows = [
         row(['PHIẾU BÁO GIÁ - HẢI HÀ HƯNG']),
         row(['Công ty',p.company?.name||'CÔNG TY TNHH KINH DOANH TỔNG HỢP HẢI HÀ HƯNG']),
@@ -466,7 +489,7 @@
         row(['Công nợ cũ (đ)',[p.oldDebtEnabled?n(p.oldDebt):0,'Number']]),
         row(['TỔNG THANH TOÁN (đ)',[n(t.grand),'Number']])
       ];
-      const xml = `<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40"><Styles><Style ss:ID="Default" ss:Name="Normal"><Alignment ss:Vertical="Center"/><Font ss:FontName="Arial" ss:Size="10"/></Style></Styles>${sheet('Báo giá',summaryRows)}${sheet('Nhôm thanh',alRows)}${sheet('Phụ kiện',acRows)}${sheet('Thanh toán',paymentRows)}</Workbook>`;
+      const xml = `<?xml version="1.0" encoding="UTF-8"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40"><Styles><Style ss:ID="Default" ss:Name="Normal"><Alignment ss:Vertical="Center"/><Font ss:FontName="Arial" ss:Size="10"/></Style></Styles>${sheet('Tổng hợp',consolidatedRows)}${sheet('Báo giá',summaryRows)}${sheet('Nhôm thanh',alRows)}${sheet('Phụ kiện',acRows)}${sheet('Thanh toán',paymentRows)}</Workbook>`;
       const blob = new Blob(['\ufeff',xml],{type:'application/vnd.ms-excel;charset=utf-8'});
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a'); a.href=url; a.download=`${(q.code||'Bao_gia_Hai_Ha_Hung').replace(/[^\w.-]+/g,'_')}.xls`;
