@@ -2153,14 +2153,6 @@
   },
   {
     "system": "VT55s",
-    "code": "GR3",
-    "name": "Thanh nhôm bọc inox cửa trượt hệ thường (6m)",
-    "unit": "thanh",
-    "grp": "",
-    "price": 170000
-  },
-  {
-    "system": "VT55s",
     "code": "GTB02",
     "name": "Bánh xe loại 2 con lăn dùng cho cửa sổ,\n ( dùng cho hệ ray 5mm - tải trọng 80kg)",
     "unit": "chiếc",
@@ -2413,7 +2405,7 @@
     "name": "Ke vĩnh cửu Cánh cửa đi mở quay Kenwin 55s (31x40) - 2 vít",
     "unit": "Chiếc",
     "grp": "",
-    "price": 13700
+    "price": 10500
   },
   {
     "system": "KVC_55S",
