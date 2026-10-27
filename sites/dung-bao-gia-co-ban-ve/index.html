@@ -130,6 +130,95 @@ body.layout-landscape .p2-original-frame{height:520px}
  body.layout-landscape .page2 .p2-original-frame img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
 }
 
+
+/* FIX: ghi chú nhiều dòng không đè lên footer khi in */
+@media print {
+  .sheet {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 297mm !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .main {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .drawing-panel {
+    min-height: 0 !important;
+  }
+
+  .drawing {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    object-fit: contain;
+  }
+
+  .notes {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    padding: 2mm 2.5mm !important;
+    line-height: 1.25 !important;
+  }
+
+  .notes-body {
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere;
+  }
+
+  .footer {
+    flex: 0 0 auto !important;
+    margin-top: 0 !important;
+    position: static !important;
+  }
+
+  .pagefoot {
+    flex: 0 0 auto !important;
+    margin-top: 1mm !important;
+  }
+
+  /* A4 ngang: cho vùng bản vẽ co lại khi ghi chú dài */
+  body.layout-landscape .sheet {
+    width: 297mm !important;
+    height: 210mm !important;
+    min-height: 0 !important;
+    padding: 6mm 9mm 4mm !important;
+  }
+
+  body.layout-landscape .main {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  body.layout-landscape .drawing {
+    flex: 1 1 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+  }
+
+  body.layout-landscape .notes {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 1.5mm 2mm !important;
+    font-size: 7pt !important;
+    line-height: 1.2 !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -151,7 +240,7 @@ body.layout-landscape .p2-original-frame{height:520px}
     <option value="sliding-turn-4">Cửa đi trượt quay 4 cánh</option>
     <option value="sliding-turn-2-fix">Cửa trượt quay 2 cánh + ô fix</option>
     <option value="sliding-turn-4-fix">Cửa trượt quay 4 cánh + ô fix</option>
-    <option value="sliding-2">Cửa lùa 2 cánh</option>
+    <option value="sliding-2">Cửa trượt quay 2 cánh</option>
     <option value="sliding-3">Cửa lùa 3 cánh</option>
     <option value="swing-2">Cửa mở quay 2 cánh</option>
     <option value="swing-1">Cửa mở quay 1 cánh</option>
@@ -162,7 +251,7 @@ body.layout-landscape .p2-original-frame{height:520px}
   <div class="twocol"><div><label>Thương hiệu</label><input id="brand" value="Kögen"></div><div><label>Hệ nhôm</label><input id="profile" value="Hệ TQ-86"></div></div>
   <div class="twocol"><div><label>Bản cánh</label><input id="leaf" value="35 x 86 mm"></div><div><label>Màu nhôm</label><input id="color" value="Ghi Xám"></div></div>
   <div class="twocol"><div><label>Màu khóa</label><input id="lock" value="Đen xám"></div><div><label>Loại kính</label><input id="glass" value="Cường lực 10mm"></div></div>
-  <label>Thương hiệu phụ kiện</label><input id="hardware" value="Bogo cao cấp">
+  <label>Thương hiệu phụ kiện</label><input id="hardware" value="Jingcheng">
   <label>Thông tin công ty / hotline</label><input id="company" value="CÔNG TY TNHH HẢI HÀ HƯNG">
   <label>Địa chỉ / hotline</label><input id="address" value="Quảng Nam - Đà Nẵng | Hotline: ................................">
   <label>Nhà sản xuất / thương hiệu</label><input id="maker" value="HẢI HÀ HƯNG">

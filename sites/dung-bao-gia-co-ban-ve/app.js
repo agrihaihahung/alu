@@ -4,7 +4,7 @@ const systems = {
  'sliding-turn-4-fix':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA ĐI TRƯỢT QUAY 4 CÁNH CÓ Ô FIX',panels:4,type:'4C-FIX (Trượt quay)',code:'TQ-4C-FIX',arrows:true,fix:true},
  'sliding-turn-2-fix':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA ĐI TRƯỢT QUAY 2 CÁNH CÓ Ô FIX',panels:2,type:'2C-FIX (Trượt quay)',code:'TQ-2C-FIX',arrows:true,fix:true},
  'sliding-turn-4':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA ĐI TRƯỢT QUAY 4 CÁNH',panels:4,type:'4C-N (Trượt quay)',code:'TQ-4C',arrows:true},
- 'sliding-2':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA LÙA 2 CÁNH',panels:2,type:'2C (Cửa lùa)',code:'L-2C',arrows:true},
+ 'sliding-2':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA TRƯỢT QUAY 2 CÁNH',panels:2,type:'2C (Cửa lùa)',code:'L-2C',arrows:true},
  'sliding-3':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA LÙA 3 CÁNH',panels:3,type:'3C (Cửa lùa)',code:'L-3C',arrows:true},
  'swing-2':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA MỞ QUAY 2 CÁNH',panels:2,type:'2C (Mở quay)',code:'MQ-2C',arrows:false},
  'swing-1':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA MỞ QUAY 1 CÁNH',panels:1,type:'1C (Mở quay)',code:'MQ-1C',arrows:false}
