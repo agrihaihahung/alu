@@ -33,7 +33,7 @@ button{width:100%;border:0;border-radius:8px;padding:11px 12px;font-weight:700;c
 .manufacturer{margin-top:auto;background:#e8edf4;border-radius:4px;padding:8px;font-size:10px}
 .notes{border:1px solid var(--line);border-top:0;padding:10px 12px;font-size:10px;min-height:88px}
 .notes-title{font-weight:800;margin-bottom:5px}
-.notes-body{white-space:pre-line}
+.notes-body{white-space:pre-line;color:#d00000;font-weight:700}
 .footer{border:1px solid var(--ink);margin-top:0;padding:8px 10px;display:grid;grid-template-columns:1.5fr 1fr;gap:15px;font-size:9px}
 .footer p{margin:1px 0}.pagefoot{display:flex;justify-content:space-between;color:#667085;font-size:9px;margin-top:12px}
 .dimension{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#172033}
@@ -255,9 +255,14 @@ body.layout-landscape .p2-original-frame{height:520px}
   <label>Thông tin công ty / hotline</label><input id="company" value="CÔNG TY TNHH HẢI HÀ HƯNG">
   <label>Địa chỉ / hotline</label><input id="address" value="Quảng Nam - Đà Nẵng | Hotline: ................................">
   <label>Nhà sản xuất / thương hiệu</label><input id="maker" value="HẢI HÀ HƯNG">
-  <label>Ghi chú sản xuất lắp đặt</label><textarea id="notes">Cửa sản xuất theo kích thước thực tế đã xác nhận.
-Kiểm tra kích thước ô chờ và hướng mở trước khi sản xuất.
-Màu sắc, kính và phụ kiện theo cấu hình báo giá đã thống nhất.</textarea>
+  <label>Ghi chú sản xuất lắp đặt</label><textarea id="notes">- Cửa sản xuất theo kích thước thực tế đã xác nhận.
+- Kiểm tra kích thước ô chờ và hướng mở trước khi sản xuất.
+- Màu sắc, kính và phụ kiện theo cấu hình báo giá đã thống nhất.
+- Cửa trươt quay 1 chiều bản c-ánh 35*86
+- Sản xuất 4 cánh bằng nhau
+- Đứng ngoài mở ngoài khoá bên phải
+- PK Jingcheng: khoá màu đen + bánh xe 4 con lăn và 4 bản lề/cánh
+- Tay nắm: 1 cặp - bắt mặt trong</textarea>
   <div class="twocol"><div><label>Ngày lập</label><input id="date" type="date" value="2026-10-26"></div><div><label>Người duyệt</label><input id="approver" value="Bộ phận kỹ thuật"></div></div>
   <button class="primary" onclick="window.print()">Xuất PDF / In trang 1</button>
   <button class="secondary" onclick="resetExample()">Khôi phục mẫu 2800 × 2400</button>
