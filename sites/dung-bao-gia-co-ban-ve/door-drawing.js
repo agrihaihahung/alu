@@ -1,23 +1,43 @@
 /* ============================================================
    DOOR DRAWING ENGINE — TRƯỢT QUAY
    Hình tự co giãn theo tỷ lệ W/H nhập vào; có kích thước ngang và cao.
+   Bố cục cửa 4 cánh + ô fix bám theo ảnh mẫu:
+     - 2 cánh trượt ở giữa (mỗi cánh ~27% bề rộng), tay nắm đôi dạng "[ ]"
+       đặt thấp hơn tâm cửa (~61% chiều cao).
+     - 2 cánh ngoài là cánh cố định, vẽ chữ V (chevron) có đỉnh hướng ra ngoài.
+     - Ô fix phía trên chia 3 khoang, thanh đố nằm đúng giữa đố đứng của cánh trượt.
+   Hệ slim 1 chiều: system.oneWay=true, system.slim=true, system.openSide='left'|'right'.
+   Phân biệt 2 kiểu cửa slim 1 chiều:
+     - TRƯỢT QUAY : system.swing=true (mặc định) -> có 1 cánh quay ở phía mở (vẽ chữ V +
+                    mũi tên gập "trượt rồi quay"); các cánh còn lại là cánh trượt (mũi tên thẳng).
+     - TRƯỢT THƯỜNG: system.swing=false -> KHÔNG có chữ V; cánh ở phía mở là cánh cố định
+                    (không mũi tên), các cánh còn lại trượt về phía đó.
    API: DoorDrawing.render({svg, width, height, system})
    ============================================================ */
 (function(global){
   'use strict';
   const STYLE = {
-    frame:'#aeb2b1', frameEdge:'#666d70', glass:'#adf4e9',
-    glassAlt:'#a9eee9', movement:'#3978b8', handle:'#182235',
-    outline:'#60696b', dimension:'#34495e'
+    frame:'#a5a9a8', frameEdge:'#6d7473', glass:'#b0f5e8',
+    glassEdge:'#6f7877', glassHighlight:'#8fdcd0',
+    bevelTop:'#bcc0bf', bevelBottom:'#a0a4a3', bevelLeft:'#b2b6b5', bevelRight:'#9fa3a2',
+    movement:'#2d6cb5', handle:'#141c2b',
+    dimension:'#34495e'
   };
   const GEOMETRY = {
     viewBox:{width:800,height:600},
     // Vùng tối đa dành cho khung cửa, chừa lề cho đường kích thước.
     fit:{left:90,top:70,width:640,height:450},
-    frame:{left:15,right:15,top:15,bottom:15},
-    twoLeaf:{meetingGap:7}, fourLeaf:{meetingGap:8},
-    handleHeightRatio:0.16, handleWidth:8, dimensionOffset:25
+    // Các tỷ lệ đo từ ảnh mẫu
+    fixPaneRatio:0.146,      // chiều cao khoang kính ô fix / chiều cao lòng khung
+    fixTotalRatio:0.182,     // ô fix + thanh ngang / chiều cao lòng khung
+    slideLeafRatio:0.27,     // bề rộng mỗi cánh trượt / bề rộng lòng khung (4 cánh)
+    handleCenterRatio:0.61,  // vị trí tâm tay nắm theo chiều cao cánh (từ trên xuống)
+    handleHeightRatio:0.18,
+    dimensionOffset:25
   };
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+  /* ---------- Primitive ---------- */
   function rect(x,y,w,h,fill,stroke=STYLE.frameEdge,sw=1,extra=''){
     return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}" ${extra}/>`;
   }
@@ -25,124 +45,255 @@
     return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" stroke-width="${sw}" ${extra}/>`;
   }
   function polygon(points,fill,stroke=STYLE.frameEdge,sw=1){
-    return `<polygon points="${points}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`;
+    return `<polygon points="${points}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}" stroke-linejoin="round"/>`;
   }
-  function drawOuterFrame(x,y,w,h){
-    let s=rect(x,y,w,h,STYLE.frame,STYLE.frameEdge,1.3);
-    const c=Math.min(15,w*.06,h*.06);
-    s+=polygon(`${x},${y} ${x+c},${y+c} ${x+c},${y+h-c} ${x},${y+h}`,'#b6bab9');
-    s+=polygon(`${x+w},${y} ${x+w-c},${y+c} ${x+w-c},${y+h-c} ${x+w},${y+h}`,'#b6bab9');
-    s+=polygon(`${x},${y} ${x+c},${y+c} ${x+w-c},${y+c} ${x+w},${y}`,'#c1c5c4');
-    s+=polygon(`${x},${y+h} ${x+c},${y+h-c} ${x+w-c},${y+h-c} ${x+w},${y+h}`,'#b4b8b7');
-    s+=line(x+c,y+c,x+w-c,y+c,'#7b8282',.7);
-    s+=line(x+c,y+h-c,x+w-c,y+h-c,'#7b8282',.7);
-    return s;
-  }
-  function drawHandle(x,y,h,side){
-    const hh=Math.min(86,h*.23), hw=8, top=y+(h-hh)/2;
-    const xx=side==='left'?x+2:x-2-hw;
-    // Tay nắm cách điệu theo ảnh mẫu.
-    return `<path d="M${xx} ${top} l${hw} 0 l0 ${hh*.18} q0 5 -3 9 l0 ${hh*.46} q0 5 3 9 l0 ${hh*.18} l-${hw} 0 l0 -${hh*.18} q0 -5 3 -9 l0 -${hh*.46} q0 -5 -3 -9 Z" fill="${STYLE.handle}" stroke="${STYLE.handle}" stroke-width=".8"/>`;
-  }
-  function drawLeaf(x,y,w,h,opts={}){
-    const b=Math.max(5,Math.min(11,w*.045,h*.025));
-    let s=rect(x,y,w,h,STYLE.frame,STYLE.frameEdge,1.1);
-    s+=rect(x+b,y+b,w-2*b,h-2*b,opts.glass||STYLE.glass,'#687273',.8);
-    s+=rect(x+b+3,y+b+3,w-2*(b+3),h-2*(b+3),'none','#c2c7c6',.55);
-    const inset=Math.max(4,b);
-    if(opts.movement==='chevron-right'){
-      s+=line(x+inset,y+inset,x+w-inset,y+h*.5,STYLE.movement,1.2);
-      s+=line(x+w-inset,y+h*.5,x+inset,y+h-inset,STYLE.movement,1.2);
-    } else if(opts.movement==='chevron-left'){
-      s+=line(x+w-inset,y+inset,x+inset,y+h*.5,STYLE.movement,1.2);
-      s+=line(x+inset,y+h*.5,x+w-inset,y+h-inset,STYLE.movement,1.2);
-    } else if(opts.movement==='arrow-left'||opts.movement==='arrow-right'){
-      const cy=y+h*.5, len=Math.min(w*.42,58), cx=x+w*.5, dir=opts.movement==='arrow-right'?1:-1;
-      const tipX=cx+dir*len*.48, startX=cx-dir*len*.48, tip=8;
-      s+=line(startX,cy,tipX,cy,STYLE.movement,1.7);
-      if(dir===1)s+=polygon(`${tipX},${cy} ${tipX-tip},${cy-tip*.75} ${tipX-tip},${cy+tip*.75}`,STYLE.movement,STYLE.movement,.5);
-      else s+=polygon(`${tipX},${cy} ${tipX+tip},${cy-tip*.75} ${tipX+tip},${cy+tip*.75}`,STYLE.movement,STYLE.movement,.5);
+
+  /* ---------- Khung có vát mép 45° (dùng cho khung bao và cánh) ---------- */
+  function bevelFrame(x,y,w,h,b,glass,glassStroke=STYLE.glassEdge){
+    let s=rect(x,y,w,h,STYLE.frame,STYLE.frameEdge,1);
+    const e='#7b8282', sw=.6;
+    s+=polygon(`${x},${y} ${x+w},${y} ${x+w-b},${y+b} ${x+b},${y+b}`,STYLE.bevelTop,e,sw);
+    s+=polygon(`${x},${y+h} ${x+w},${y+h} ${x+w-b},${y+h-b} ${x+b},${y+h-b}`,STYLE.bevelBottom,e,sw);
+    s+=polygon(`${x},${y} ${x+b},${y+b} ${x+b},${y+h-b} ${x},${y+h}`,STYLE.bevelLeft,e,sw);
+    s+=polygon(`${x+w},${y} ${x+w-b},${y+b} ${x+w-b},${y+h-b} ${x+w},${y+h}`,STYLE.bevelRight,e,sw);
+    if(glass){
+      s+=rect(x+b,y+b,w-2*b,h-2*b,glass,glassStroke,.8);
+      if(w-2*b>8&&h-2*b>8)
+        s+=rect(x+b+2,y+b+2,w-2*b-4,h-2*b-4,'none',STYLE.glassHighlight,.4);
     }
-    if(opts.handle)s+=drawHandle(opts.handleSide==='left'?x:x+w,y,h,opts.handleSide||'left');
     return s;
   }
-  function drawTwoLeaf(x,y,w,h){
-    const gap=GEOMETRY.twoLeaf.meetingGap, leafW=(w-gap)/2;
-    let s=drawLeaf(x,y,leafW,h,{movement:'arrow-left',handle:true,handleSide:'left'});
-    s+=drawLeaf(x+leafW+gap,y,leafW,h,{movement:'chevron-left'});
-    s+=rect(x+leafW-3,y,gap+6,h,STYLE.frame,STYLE.frameEdge,1.1);
-    s+=line(x+leafW+1,y+3,x+leafW+1,y+h-3,'#6e7575',.8);
-    // Mũi tên cánh trái được vẽ nổi phía trên thanh giữa.
-    const cy=y+h*.5,cx=x+leafW*.5,len=Math.min(leafW*.42,58),tip=8;
-    s+=line(cx+len*.45,cy,cx-len*.45,cy,STYLE.movement,1.7);
-    s+=polygon(`${cx-len*.45},${cy} ${cx-len*.45+tip},${cy-tip*.8} ${cx-len*.45+tip},${cy+tip*.8}`,STYLE.movement,STYLE.movement,.5);
+
+  /* ---------- Ký hiệu chuyển động ---------- */
+  // Mũi tên đặc: dir=1 hướng sang phải, dir=-1 sang trái
+  function drawArrow(cx,cy,len,head,dir){
+    const tipX=cx+dir*len/2, tailX=cx-dir*len/2, hh=head*.68;
+    let s=line(tailX,cy,tipX-dir*head*.6,cy,STYLE.movement,1.3);
+    s+=polygon(`${tipX},${cy} ${tipX-dir*head},${cy-hh} ${tipX-dir*head},${cy+hh}`,STYLE.movement,STYLE.movement,.4);
     return s;
   }
-  function drawFourLeaf(x,y,w,h){
-    const gap=GEOMETRY.fourLeaf.meetingGap, leafW=(w-3*gap)/4;
-    let s='';
-    const movement=['chevron-left','arrow-right','arrow-left','chevron-right'];
-    for(let i=0;i<4;i++){
-      s+=drawLeaf(x+i*(leafW+gap),y,leafW,h,{movement:movement[i],glass:(i===1||i===2)?STYLE.glassAlt:STYLE.glass});
+  // Mũi tên gập (trượt rồi quay) cho cánh quay: đi ngang theo dir rồi gập xuống, đầu mũi tên chỉ xuống
+  function drawBentArrow(cx,cy,len,head,dir){
+    const vl=len*.5, ys=cy-vl/2;
+    const xs=cx-dir*len/2, xe=cx+dir*len/2, hh=head*.68;
+    let s=`<polyline points="${xs},${ys} ${xe},${ys} ${xe},${ys+vl-head*.6}" fill="none" stroke="${STYLE.movement}" stroke-width="1.3" stroke-linejoin="round"/>`;
+    s+=polygon(`${xe},${ys+vl} ${xe-hh},${ys+vl-head} ${xe+hh},${ys+vl-head}`,STYLE.movement,STYLE.movement,.4);
+    return s;
+  }
+  // Chữ V cánh cố định: đỉnh tại apexX, hai đầu tại farX (trên & dưới kính)
+  function drawChevron(apexX,farX,topY,botY){
+    const midY=(topY+botY)/2;
+    return line(farX,topY,apexX,midY,STYLE.movement,1.2)+line(apexX,midY,farX,botY,STYLE.movement,1.2);
+  }
+
+  /* ---------- Tay nắm "[ ]" ---------- */
+  // side='left' vẽ "[" ; side='right' vẽ "]"
+  function drawBracket(x0,cy,hw,hh,side){
+    const y0=cy-hh/2, ft=Math.max(3,hh*.09), bt=Math.max(2,hw*.32);
+    let d;
+    if(side==='left'){
+      d=`M${x0} ${y0} H${x0+hw} V${y0+ft} H${x0+bt} V${y0+hh-ft} H${x0+hw} V${y0+hh} H${x0} Z`;
+    } else {
+      d=`M${x0+hw} ${y0} H${x0} V${y0+ft} H${x0+hw-bt} V${y0+hh-ft} H${x0} V${y0+hh} H${x0+hw} Z`;
     }
-    const cy=y+h*.5, hh=Math.min(86,h*.23), hw=8, center=x+2*leafW+1.5*gap;
-    s+=rect(center-gap*.6-hw/2,cy-hh/2,hw,hh,STYLE.handle,STYLE.handle,.7);
-    s+=rect(center+gap*.6-hw/2,cy-hh/2,hw,hh,STYLE.handle,STYLE.handle,.7);
-    return s;
+    return `<path d="${d}" fill="${STYLE.handle}" stroke="${STYLE.handle}" stroke-width=".8" stroke-linejoin="round"/>`;
   }
+  function drawHandlePair(c,y,h,w,s){
+    const hw=Math.min(w*.0154,s*.62), gap=hw*.35;
+    const hh=h*GEOMETRY.handleHeightRatio, cy=y+h*GEOMETRY.handleCenterRatio;
+    return drawBracket(c-gap-hw,cy,hw,hh,'left')+drawBracket(c+gap,cy,hw,hh,'right');
+  }
+
+  /* ---------- Cánh cửa ---------- */
+  function drawFourLeaf(x,y,w,h,s){
+    const c=x+w/2, lw=w*GEOMETRY.slideLeafRatio;
+    const slideLx=c-lw, slideRx=c+lw;
+    const gTop=y+s, gBot=y+h-s;
+    let out='';
+    // Hai cánh ngoài (cố định) – kéo dài vào dưới đố của cánh trượt
+    out+=bevelFrame(x,y,slideLx+s-x,h,s,STYLE.glass);
+    out+=drawChevron(x+s+1.5,slideLx+s/2,gTop,gBot);
+    const rx=slideRx-s;
+    out+=bevelFrame(rx,y,x+w-rx,h,s,STYLE.glass);
+    out+=drawChevron(x+w-s-1.5,slideRx-s/2,gTop,gBot);
+    // Hai cánh trượt ở giữa
+    out+=bevelFrame(slideLx,y,lw,h,s,STYLE.glass);
+    out+=bevelFrame(c,y,lw,h,s,STYLE.glass);
+    out+=line(c,y+1,c,y+h-1,'#4f5758',1);
+    // Mũi tên đối nhau
+    const gw=lw-2*s, len=gw*.4, head=gw*.12, cy=y+h/2;
+    out+=drawArrow(c-lw/2,cy,len,head,1);
+    out+=drawArrow(c+lw/2,cy,len,head,-1);
+    out+=drawHandlePair(c,y,h,w,s);
+    return {svg:out, mullions:[slideLx+s/2, slideRx-s/2]};
+  }
+  function drawTwoLeaf(x,y,w,h,s){
+    const c=x+w/2, gTop=y+s, gBot=y+h-s;
+    let out='';
+    // Cánh phải cố định (vẽ trước), cánh trái trượt đè lên
+    const rx=c-s/2;
+    out+=bevelFrame(rx,y,x+w-rx,h,s,STYLE.glass);
+    out+=drawChevron(x+w-s-1.5,c+s/2,gTop,gBot);
+    out+=bevelFrame(x,y,w/2+s/2,h,s,STYLE.glass);
+    out+=line(c,y+1,c,y+h-1,'#4f5758',1);
+    const gx0=x+s, gx1=c-s/2, gw=gx1-gx0;
+    out+=drawArrow((gx0+gx1)/2,y+h/2,Math.min(gw*.4,70),Math.min(gw*.12,22),1);
+    out+=drawHandlePair(c,y,h,w,s);
+    return {svg:out, mullions:[]};
+  }
+
+  // Cửa slim 1 chiều (n cánh bằng nhau, các cánh trượt về cùng một phía = phía mở).
+  // swing=true  -> TRƯỢT QUAY: 4 cánh chia 2:2 (bỏ qua openSide), 2 cánh thì 1 cánh quay theo openSide. 4 cánh: 2 cánh ngoài là cánh quay (chữ V + mũi tên gập),
+  //                các cánh còn lại là cánh trượt (mũi tên thẳng).
+  // swing=false -> TRƯỢT THƯỜNG: không có chữ V; cánh ngoài cùng phía mở là cánh cố định
+  //                (không mũi tên), các cánh còn lại trượt (mũi tên thẳng).
+  // side='left' : phía mở bên trái (cánh đặc biệt là cánh đầu tiên); 'right': đối xứng.
+  function drawOneWay(x,y,w,h,s,n,side,swing){
+    const lw=(w+(n-1)*s)/n, step=lw-s;
+    const gTop=y+s, gBot=y+h-s, cy=y+h/2;
+    const dir=side==='right'?1:-1;
+    const edgeIdx=side==='right'?n-1:0;           // cánh ngoài cùng phía mở
+    const gw=lw-2*s, len=Math.min(gw*.4,70), head=Math.min(gw*.12,22);
+    let out='';
+    for(let i=0;i<n;i++) out+=bevelFrame(x+i*step,y,lw,h,s,STYLE.glass);
+    if(swing&&n!==4){
+      // TRƯỢT QUAY 2 cánh (không chia 2:2): 1 cánh quay ở phía mở (chữ V + mũi tên gập),
+      // các cánh còn lại trượt về phía mở (mũi tên thẳng).
+      if(side==='right') out+=drawChevron(x+w-s-1.5,x+edgeIdx*step+s/2,gTop,gBot);
+      else out+=drawChevron(x+s+1.5,x+lw-s/2,gTop,gBot);
+      for(let i=0;i<n;i++){
+        const cx=x+i*step+lw/2;
+        out+=i===edgeIdx?drawBentArrow(cx,cy,len,head,dir):drawArrow(cx,cy,len,head,dir);
+      }
+      return {svg:out, mullions:[]};
+    }
+    if(swing){
+      // TRƯỢT QUAY 4 cánh chia 2:2 (theo bản vẽ mẫu):
+      //  - 2 cánh ngoài cùng là cánh QUAY: chữ V đỉnh hướng ra ngoài + mũi tên gập
+      //  - các cánh giữa trượt ngược chiều nhau ra 2 bên (nửa trái ←, nửa phải →)
+      const half=n/2;
+      out+=drawChevron(x+s+1.5,x+lw-s/2,gTop,gBot);                       // cánh quay trái
+      out+=drawChevron(x+w-s-1.5,x+(n-1)*step+s/2,gTop,gBot);             // cánh quay phải
+      for(let i=0;i<n;i++){
+        const cx=x+i*step+lw/2;
+        if(i===half-.5){ continue; }                                      // n lẻ: cánh giữa cố định
+        const d=i<half?-1:1;
+        if(i===0||i===n-1) out+=drawBentArrow(cx,cy,len,head,d);          // trượt rồi quay
+        else out+=drawArrow(cx,cy,len,head,d);
+      }
+      return {svg:out, mullions:[]};
+    }
+    for(let i=0;i<n;i++){
+      const cx=x+i*step+lw/2;
+      if(i!==edgeIdx) out+=drawArrow(cx,cy,len,head,dir);   // trượt thường: cánh phía mở cố định
+    }
+    return {svg:out, mullions:[]};
+  }
+
+  /* ---------- Render ---------- */
   function render(config){
     const svg=config.svg, w=Math.max(100,Number(config.width)||2800), h=Math.max(100,Number(config.height)||2400);
     const system=config.system||{}, panels=Number(system.panels)||2;
     const vb=GEOMETRY.viewBox, fit=GEOMETRY.fit;
-    // Tỷ lệ khung trên hình luôn theo W/H. Fit vào vùng có sẵn mà không làm méo cửa.
+    // Tỷ lệ khung trên hình luôn theo W/H, không làm méo cửa.
     const aspect=w/h;
     let frameW=fit.width, frameH=frameW/aspect;
     if(frameH>fit.height){frameH=fit.height;frameW=frameH*aspect;}
-    // Cực trị rất dài/hẹp vẫn nằm trong vùng vẽ.
     frameW=Math.max(70,frameW); frameH=Math.max(90,frameH);
     const x=fit.left+(fit.width-frameW)/2, y=fit.top+(fit.height-frameH)/2;
-    const fx=x+GEOMETRY.frame.left, fy=y+GEOMETRY.frame.top;
-    const fw=frameW-GEOMETRY.frame.left-GEOMETRY.frame.right;
-    const fh=frameH-GEOMETRY.frame.top-GEOMETRY.frame.bottom;
+
+    // Độ dày theo tỷ lệ ảnh mẫu
+    const u=Math.min(frameW,frameH);
+    const t=clamp(u*.016,5,14);      // khung bao
+    const s=clamp(u*.028,8,22)*(system.slim?.62:1);  // đố / thanh cánh (slim: mảnh hơn)
+    const ix=x+t, iy=y+t, iw=frameW-2*t, ih=frameH-2*t;
+
     let out=`<rect x="0" y="0" width="${vb.width}" height="${vb.height}" fill="#fff"/>`;
-    // Kích thước ngang: đường dóng và số liệu trên đầu cửa.
+
+    // Kích thước ngang
     const dimY=y-18;
     out+=line(x,dimY,x+frameW,dimY,STYLE.dimension,1,'stroke-dasharray="3 2"');
     out+=line(x,dimY-5,x,dimY+5,STYLE.dimension,1);
     out+=line(x+frameW,dimY-5,x+frameW,dimY+5,STYLE.dimension,1);
     out+=`<text x="${x+frameW/2}" y="${dimY-7}" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">${w} mm</text>`;
-    // Kích thước cao: đường dóng và số liệu xoay dọc bên trái.
+    // Kích thước cao
     const dimX=x-25;
     out+=line(dimX,y,dimX,y+frameH,STYLE.dimension,1,'stroke-dasharray="3 2"');
     out+=line(dimX-5,y,dimX+5,y,STYLE.dimension,1);
     out+=line(dimX-5,y+frameH,dimX+5,y+frameH,STYLE.dimension,1);
     out+=`<text x="${dimX-8}" y="${y+frameH/2}" text-anchor="middle" transform="rotate(-90 ${dimX-8} ${y+frameH/2})" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#172033">${h} mm</text>`;
-    out+=drawOuterFrame(x,y,frameW,frameH);
-    out+=rect(fx,fy,fw,fh,STYLE.frame,STYLE.frameEdge,1);
-    const inset=Math.min(8,fw*.025,fh*.025), ix=fx+inset,iy=fy+inset,iw=fw-2*inset,ih=fh-2*inset;
+
+    // Khung bao (không kính, phần lòng sẽ được vẽ đè lên)
+    out+=bevelFrame(x,y,frameW,frameH,t,null);
+
+    // Vùng cánh
+    let doorY=iy, doorH=ih, mullions=[];
+    const leafFn=system.oneWay
+      ? (a,b,c,d,e)=>drawOneWay(a,b,c,d,e,panels,system.openSide||'left',system.swing!==false)
+      : (panels===4?drawFourLeaf:drawTwoLeaf);
+
     if(system.fix){
-      // Ô fix phía trên: 1 khoang với cửa 2 cánh; 3 khoang với cửa 4 cánh.
-      const fixH=Math.max(42,Math.min(ih*.19,ih-100));
-      const fixPaneY=iy, fixPaneH=fixH-inset*.45;
-      out+=rect(ix+2,fixPaneY+2,iw-4,fixPaneH-2,STYLE.glass,'#687273',.9);
-      out+=rect(ix+6,fixPaneY+6,iw-12,fixPaneH-10,'none','#c2c7c6',.55);
-      const divisions=panels===4?3:1;
-      for(let i=1;i<divisions;i++){
-        const dx=ix+iw*i/divisions;
-        out+=rect(dx-4,fixPaneY,8,fixPaneH,STYLE.frame,STYLE.frameEdge,.9);
-        out+=line(dx,fixPaneY+2,dx,fixPaneY+fixPaneH-2,'#747b7b',.65);
+      const paneH=ih*GEOMETRY.fixPaneRatio;
+      const totalH=ih*GEOMETRY.fixTotalRatio;
+      doorY=iy+totalH; doorH=ih-totalH;
+      const leaf=leafFn(ix,doorY,iw,doorH,s);
+      mullions=leaf.mullions;
+
+      // Nền ô fix
+      out+=rect(ix,iy,iw,totalH,STYLE.frame,STYLE.frameEdge,1);
+      // Các khoang kính ô fix (chia theo đố của cánh trượt khi 4 cánh)
+      const q=Math.max(2.5,s*.2), mw=s*.65;
+      const cuts=[ix,...mullions.flatMap(m=>[m-mw/2,m+mw/2]),ix+iw];
+      for(let i=0;i<cuts.length;i+=2){
+        const px=cuts[i], pw=cuts[i+1]-cuts[i];
+        out+=rect(px+q,iy+q,pw-2*q,paneH-q,STYLE.glass,STYLE.glassEdge,.8);
+        out+=rect(px+q+2,iy+q+2,pw-2*q-4,paneH-q-4,'none',STYLE.glassHighlight,.4);
       }
-      const transomY=iy+fixH;
-      out+=rect(fx,transomY-3,fw,7,STYLE.frame,STYLE.frameEdge,1);
-      const doorY=transomY+4, doorH=iy+ih-doorY;
-      if(panels===4)out+=drawFourLeaf(ix,doorY,iw,doorH);else out+=drawTwoLeaf(ix,doorY,iw,doorH);
+      // Thanh ngang (transom) có 2 đường gờ như ảnh mẫu
+      const ty=iy+paneH;
+      out+=rect(ix,ty,iw,totalH-paneH,STYLE.frame,STYLE.frameEdge,1);
+      out+=line(ix,ty+(totalH-paneH)*.28,ix+iw,ty+(totalH-paneH)*.28,'#7b8282',.7);
+      out+=line(ix,ty+(totalH-paneH)*.5,ix+iw,ty+(totalH-paneH)*.5,'#7b8282',.5);
+      out+=leaf.svg;
     } else {
-      if(panels===4)out+=drawFourLeaf(ix,iy,iw,ih);else out+=drawTwoLeaf(ix,iy,iw,ih);
+      out+=leafFn(ix,doorY,iw,doorH,s).svg;
     }
+
     svg.setAttribute('viewBox',`0 0 ${vb.width} ${vb.height}`);
     svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     svg.innerHTML=out;
     return {width:w,height:h,panels,aspect};
   }
-  global.DoorDrawing={render,STYLE,GEOMETRY};
+
+  /* ---------- Quy tắc đặt tên ảnh mặt cắt (khớp thư mục assets) ----------
+       Cửa thường         : {số cánh}-{inside|outside}              vd: 2-inside, 4-outside
+       Slim 2 cánh        : slim-2-{inside|outside}-{left|right}    vd: slim-2-inside-left, slim-2-outside-right
+       Slim 4 cánh        : slim-4-{inside|outside}                 vd: slim-4-inside, slim-4-outside
+     - inside/outside : hướng mở (bản vẽ kỹ thuật trang 2)
+     - left/right     : chiều mở cánh, CHỈ dùng cho slim 2 cánh (slim 4 cánh chia 2:2 đối xứng)
+     Tên ảnh = tên trên + phần mở rộng (.png). */
+  const SECTION_DIRS=['inside','outside'], SECTION_SIDES=['left','right'];
+
+  function sectionName(o){
+    o=o||{};
+    const n=Number(o.panels)||2;
+    const dir=SECTION_DIRS.includes(o.openDir)?o.openDir:'outside';
+    const side=SECTION_SIDES.includes(o.openSide)?o.openSide:'left';
+    if(o.slim) return n===2?`slim-2-${dir}-${side}`:`slim-${n}-${dir}`;
+    return `${n}-${dir}`;
+  }
+  // Tách tên ngược lại thành cấu hình; trả về null nếu sai cấu trúc
+  function parseSectionName(name){
+    const t=String(name||'').replace(/\.[a-z0-9]+$/i,'');
+    let m=/^slim-2-(inside|outside)-(left|right)$/.exec(t);
+    if(m) return {slim:true,panels:2,openDir:m[1],openSide:m[2]};
+    m=/^slim-(\d+)-(inside|outside)$/.exec(t);
+    if(m&&+m[1]!==2) return {slim:true,panels:+m[1],openDir:m[2],openSide:null};
+    m=/^(\d+)-(inside|outside)$/.exec(t);
+    return m?{slim:false,panels:+m[1],openDir:m[2],openSide:null}:null;
+  }
+  // Giữ để tương thích code gọi cũ: chỉ trả về đúng 1 tên theo quy tắc trên
+  function sectionCandidates(o){ return [sectionName(o)]; }
+
+  global.DoorDrawing={render,STYLE,GEOMETRY,sectionName,parseSectionName,sectionCandidates};
 })(window);

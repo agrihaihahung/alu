@@ -243,9 +243,19 @@ body.layout-landscape .p2-original-frame{height:520px}
     <option value="sliding-turn-4-fix">Cửa trượt quay 4 cánh + ô fix</option>
     <option value="sliding-2">Cửa trượt quay 2 cánh</option>
     <option value="sliding-3">Cửa lùa 3 cánh</option>
+    <option value="slim-oneway-2">Cửa trượt quay slim 1 chiều 2 cánh</option>
+    <option value="slim-oneway-4">Cửa trượt quay slim 1 chiều 4 cánh</option>
     <option value="swing-2">Cửa mở quay 2 cánh</option>
     <option value="swing-1">Cửa mở quay 1 cánh</option>
   </select>
+  <div id="openSideWrap" style="display:none">
+    <label>Chiều mở cánh (cửa 1 chiều)</label>
+    <select id="openSide">
+      <option value="left">Mở qua trái</option>
+      <option value="right">Mở qua phải</option>
+    </select>
+  </div>
+  <div class="hint" id="imgHint"></div>
   <div class="twocol"><div><label>Chiều ngang W (mm)</label><input id="width" type="number" min="100" value="2800"></div><div><label>Chiều cao H (mm)</label><input id="height" type="number" min="100" value="2400"></div></div>
   <label>Mã bản vẽ (tự sinh)</label><input id="codeInput" value="BVSX: TQ-4C-2800x2400" readonly>
   <div class="hint">Mã tự cập nhật theo kiểu cửa và kích thước W × H.</div>

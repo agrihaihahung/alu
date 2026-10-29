@@ -6,19 +6,23 @@ const systems = {
  'sliding-turn-4':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA ĐI TRƯỢT QUAY 4 CÁNH',panels:4,type:'4C-N (Trượt quay)',code:'TQ-4C',arrows:true},
  'sliding-2':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA TRƯỢT QUAY 2 CÁNH',panels:2,type:'2C (Cửa lùa)',code:'L-2C',arrows:true},
  'sliding-3':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA LÙA 3 CÁNH',panels:3,type:'3C (Cửa lùa)',code:'L-3C',arrows:true},
+ 'slim-oneway-2':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA ĐI TRƯỢT QUAY SLIM 1 CHIỀU 2 CÁNH',panels:2,type:'2C Slim (Trượt quay 1 chiều)',code:'TQS-2C',arrows:true,oneWay:true,slim:true,imageGroup:'slim-2'},
+ 'slim-oneway-4':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA ĐI TRƯỢT QUAY SLIM 1 CHIỀU 4 CÁNH',panels:4,type:'4C Slim (Trượt quay 1 chiều)',code:'TQS-4C',arrows:true,oneWay:true,slim:true,imageGroup:'slim-4'},
  'swing-2':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA MỞ QUAY 2 CÁNH',panels:2,type:'2C (Mở quay)',code:'MQ-2C',arrows:false},
  'swing-1':{title:'BẢN VẼ KỸ THUẬT SẢN XUẤT CỬA MỞ QUAY 1 CÁNH',panels:1,type:'1C (Mở quay)',code:'MQ-1C',arrows:false}
 };
+function currentSide(){return $('openSide').value==='right'?'right':'left';}
 function makeDrawingCode(){
  const s=systems[$('system').value];
  const w=Math.max(100,+$('width').value||2800);
  const h=Math.max(100,+$('height').value||2400);
- return `BVSX: ${s.code}-${w}x${h}`;
+ const side=s.oneWay?(currentSide()==='left'?'-T':'-P'):'';
+ return `BVSX: ${s.code}${side}-${w}x${h}`;
 }
 function draw(){
  const w=Math.max(100,+$('width').value||2800),h=Math.max(100,+$('height').value||2400),s=systems[$('system').value];
  $('codeInput').value=makeDrawingCode();
- window.DoorDrawing.render({svg:$('doorSvg'),width:w,height:h,system:s});
+ window.DoorDrawing.render({svg:$('doorSvg'),width:w,height:h,system:Object.assign({},s,{openSide:currentSide()})});
  $('vWidth').textContent=w+' mm';$('vHeight').textContent=h+' mm';$('vType').textContent=s.type;
  $('vTitle').textContent=s.title;
  $('vCode').textContent=makeDrawingCode();
@@ -45,8 +49,26 @@ function update(){
  const W=Math.max(100,+$('width').value||2800), H=Math.max(100,+$('height').value||2400);
  const panelsKey=count===4?'4':'2';
  const direction=$('openingDirection') ? $('openingDirection').value : 'outside';
- $('p2OriginalDrawing').src=`assets/${panelsKey}-${direction}.png`;
- $('p2DrawingTitle').textContent=`BẢN VẼ KỸ THUẬT HỆ CỬA — ${direction==='outside'?'MỞ NGOÀI':'MỞ TRONG'}`;
+ const side=currentSide();
+ $('openSideWrap').style.display=sys.oneWay?'':'none';
+ const fallback=`assets/${panelsKey}-${direction}.png`;
+ // Thứ tự ưu tiên ảnh slim: đúng hướng+chiều -> đúng chiều -> ảnh slim chung -> ảnh hệ thường
+ const cands=sys.oneWay?[
+  `assets/${sys.imageGroup}-${direction}-${side}.png`,
+  `assets/${sys.imageGroup}-${side}.png`,
+  `assets/${sys.imageGroup}.png`,
+  fallback]:[fallback];
+ const want=cands.join('|');
+ const img=$('p2OriginalDrawing');
+ if(img.dataset.want!==want){
+  img.dataset.want=want;
+  let k=0;
+  const load=()=>{img.src=cands[k];};
+  img.onload=()=>{$('imgHint').textContent=(sys.oneWay&&k===cands.length-1)?`Chưa có ảnh slim cho lựa chọn này (${cands[0]}) — đang dùng ảnh tạm ${cands[k]}.`:'';};
+  img.onerror=()=>{if(k<cands.length-1){k++;load();}};
+  load();
+ }
+ $('p2DrawingTitle').textContent=`BẢN VẼ KỸ THUẬT HỆ CỬA — ${direction==='outside'?'MỞ NGOÀI':'MỞ TRONG'}`+(sys.oneWay?` — MỞ QUA ${side==='left'?'TRÁI':'PHẢI'}`:'');
  $('p2DoorType').textContent=sys.type;
  $('p2SizeCell').textContent=`${W} × ${H} mm`;
  $('p2BrandCell').textContent=$('brand').value;
