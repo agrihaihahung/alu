@@ -3740,6 +3740,23 @@
     "Đơn giá": 159000
   },
   {
+    "MaHang": "K138-031",
+    "HeNhom": "Kogen_138",
+    "TenHangQuyCach": "Khe kính đơn",
+    "MauNhom": "Xám ngọc trai",
+    "DVT": "Thanh",
+    "TiTrong": 0.2,
+    "KgTrenThanh": 1.1900000000000002,
+    "DonGiaChuan": 159000,
+    "Mã Hàng hóa": "K138-031",
+    "Hệ Nhôm": "Kogen_138",
+    "Tên Hàng hóa": "Khe kính đơn",
+    "ĐVT": "Thanh",
+    "Màu": "Xám ngọc trai",
+    "Khối lượng (kg/thanh)": 1.1900000000000002,
+    "Đơn giá": 159000
+  },
+  {
     "MaHang": "K139-06A (Nhôm nhập khẩu 6063-T6)",
     "HeNhom": "Kogen_139",
     "TenHangQuyCach": "Đấu cánh Slim 138",
